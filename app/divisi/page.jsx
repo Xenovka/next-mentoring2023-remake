@@ -14,9 +14,7 @@ export default async function Divisi() {
 
   return (
     <div>
-      <h1>Divisi</h1>
-
-      <ul>{division && division.data.map((item, id) => <li key={id}>{item.name}</li>)}</ul>
+      <ul>{division && division.data.map((item) => <li key={item.key}>{item.name}</li>)}</ul>{" "}
     </div>
   );
 }
