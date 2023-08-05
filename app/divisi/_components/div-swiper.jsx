@@ -1,9 +1,29 @@
+"use client";
+
+import { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { DivisionContext } from "@/app/divisi/_context/division-context";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
-export default function DivisionSwiper({ divisionList, onScreenSize, onDataChanged }) {
+export default function DivisionSwiper({ divisionData }) {
+  const { setCurrentIndex } = useContext(DivisionContext);
+
+  const handleScreenSize = (swiper) => {
+    const width = window.innerWidth;
+
+    if (width < 1024) {
+      swiper.params.slidesPerView = 3;
+    } else {
+      swiper.params.slidesPerView = 5;
+    }
+  };
+
+  const onDataChanged = (swiper) => {
+    setCurrentIndex(swiper.clickedIndex);
+  };
+
   return (
     <div className="flex justify-center">
       <div className="w-9/12 mt-10">
@@ -11,11 +31,11 @@ export default function DivisionSwiper({ divisionList, onScreenSize, onDataChang
           className="h-16"
           spaceBetween={10}
           slidesPerView={5}
-          onSwiper={(swiper) => onScreenSize(swiper)}
+          onSwiper={(swiper) => handleScreenSize(swiper)}
           onClick={(swiper) => onDataChanged(swiper)}
         >
-          {divisionList &&
-            divisionList.map((item) => {
+          {divisionData &&
+            divisionData.map((item) => {
               return (
                 <SwiperSlide
                   style={{
