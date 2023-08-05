@@ -10,6 +10,8 @@ export function DivisionContextProvider({ children }) {
 
   return (
     // Providing context
-    <DivisionContext.Provider value={{ currentIndex, setCurrentIndex }}>{children}</DivisionContext.Provider>
+    <DivisionContext.Provider value={{ currentIndex, setCurrentIndex }}>
+      {children}
+    </DivisionContext.Provider>
   );
 }
