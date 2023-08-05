@@ -40,6 +40,12 @@ export default function DivisionContent({ divisionData }) {
 
   useEffect(() => {
     setDivision(divisionData[currentIndex]);
+
+    const color = divisionData[currentIndex].color;
+    setContentBoxStyles({
+      backgroundImage: `linear-gradient(to top, ${color}30 0%, ${color}10 50%)`,
+      borderImageSource: `linear-gradient(to top, ${color} 0%, transparent 80%)`
+    });
   }, [currentIndex]);
 
   return (
