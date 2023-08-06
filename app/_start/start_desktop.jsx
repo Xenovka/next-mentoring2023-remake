@@ -10,7 +10,7 @@ import Footer from "@/components/footer";
 export default function Start() {
   return (
     <main>
-      <div className="w-full h-screen relative ">
+      <div className="w-full h-screen relative">
         <Image
           src="/assets/mentoring-logo.svg"
           className="absolute top-16 left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -189,7 +189,6 @@ export default function Start() {
             </Link>
           </div>
         </div>
-
         <Footer />
       </div>
     </main>
