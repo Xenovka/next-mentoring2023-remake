@@ -6,8 +6,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-import StartDesktop from "@/app/start_desktop";
-import StartMobile from "./start_mobile";
+import StartDesktop from "@/app/_start/start_desktop";
+import StartMobile from "@/app/_start/start_mobile";
 
 export default function Home() {
   const [isEntered, setIsEntered] = useState(false);
