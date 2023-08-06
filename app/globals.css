@@ -107,13 +107,6 @@ body {
   width: 515px;
 }
 
-/* .box-crew,
-.box-preview,
-.box-description {
-  background-image: linear-gradient(to top, rgba(40, 117, 180, 0.3) 0%, rgba(40, 117, 180, 0.1) 50%);
-  border-image-source: linear-gradient(to top, #2875b4 0%, transparent 80%);
-} */
-
 .box-description {
   height: 325px;
 }
@@ -127,6 +120,11 @@ body {
   height: 99px;
   background-image: linear-gradient(to top, rgba(247, 216, 14, 0.3) 0%, rgba(40, 117, 180, 0.3) 60%);
   border-image-source: linear-gradient(to top, #f7d80e 0%, transparent 100%);
+}
+
+.box-enter {
+  background-image: linear-gradient(to top, rgba(40, 117, 180, 0.3) 0%, rgba(40, 117, 180, 0.3) 60%);
+  border-image-source: linear-gradient(to top, #2875b4 0%, transparent 100%);
 }
 
 .crew-divider {
