@@ -24,13 +24,13 @@ export default function StartMobile() {
           <Image src="/assets/mentoring-logo.svg" className="mx-auto my-auto" alt="Image" width={70} height={70} />
         </div>
         <div className="my-auto w-28">
-          <Image src="/assets/icon-gear.png" className="mx-auto my-auto" alt="Image" width={45} height={45} />
+          <Image src="/assets/icons/icon-gear.png" className="mx-auto my-auto" alt="Image" width={45} height={45} />
         </div>
       </div>
       <div className="flex justify-center mt-20 py-2 mx-auto gap-2">
         <div className="relative w-64">
           <Image
-            src="/assets/button/btn-news-mobile.svg"
+            src="/assets/buttons/btn-news-mobile.svg"
             className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             alt="Image"
             width={300}
@@ -48,7 +48,7 @@ export default function StartMobile() {
 
         <div className="relative w-24">
           <Image
-            src="/assets/button/btn-faq-mobile.svg"
+            src="/assets/buttons/btn-faq-mobile.svg"
             className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             alt="Image"
             width={100}
@@ -80,12 +80,18 @@ export default function StartMobile() {
             }
           }}
         >
-          <Image src="/assets/background/bg-zach-mobile.png" className="mx-auto" alt="Image" width={400} height={400} />
+          <Image
+            src="/assets/backgrounds/bg-zach-mobile.png"
+            className="mx-auto"
+            alt="Image"
+            width={400}
+            height={400}
+          />
         </motion.div>
 
         <div className="relative mt-8">
           <Image
-            src="/assets/button/btn-comingsoon-mobile.svg"
+            src="/assets/buttons/btn-comingsoon-mobile.svg"
             className="absolute -z-10 left-1/2 -translate-x-1/2 -translate-y-[44%]"
             alt="Image"
             width={300}
@@ -102,7 +108,7 @@ export default function StartMobile() {
         <div className="relative">
           <div className="relative w-28 mx-auto py-8">
             <Image
-              src="/assets/button/btn-gallery-mobile.svg"
+              src="/assets/buttons/btn-gallery-mobile.svg"
               className="absolute -z-10 top-2 left-1/2 -translate-x-1/2 -translate-y-1/2 "
               alt="Image"
               width={300}
@@ -116,7 +122,7 @@ export default function StartMobile() {
         <div className="relative">
           <div className="relative w-28 mx-auto py-8">
             <Image
-              src="/assets/button/btn-contact-mobile.svg"
+              src="/assets/buttons/btn-contact-mobile.svg"
               className="absolute -z-10 top-2 left-1/2 -translate-x-1/2 -translate-y-1/2 "
               alt="Image"
               width={300}
@@ -130,7 +136,7 @@ export default function StartMobile() {
         <div className="relative">
           <div className="relative w-28 mx-auto py-8">
             <Image
-              src="/assets/button/btn-about-mobile.svg"
+              src="/assets/buttons/btn-about-mobile.svg"
               className="absolute -z-10 top-2 left-1/2 -translate-x-1/2 -translate-y-1/2 "
               alt="Image"
               width={300}
