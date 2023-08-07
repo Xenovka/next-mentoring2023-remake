@@ -1,0 +1,83 @@
+.title {
+  aspect-ratio: 7 / 1;
+  background: url("../../public/assets/borders/border-about.png");
+  background-size: cover;
+  background-position: start;
+  background-repeat: no-repeat;
+}
+
+.bg {
+  border: 2px solid transparent;
+  border-top: none;
+  border-image-repeat: round;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to top, #004bef 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(1, 75, 239, 0.3) 0%, rgba(23, 37, 70, 0.3) 100%);
+}
+
+/* styling untuk tabs */
+.tabs {
+  padding: 15px;
+  text-align: left;
+  width: 30dvw;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+
+.tabs:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+.activetabs {
+  border: 2px solid transparent;
+  border-top: none;
+  border-image-repeat: round;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to top, #004bef 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(1, 75, 239, 0.3) 0%, rgba(23, 37, 70, 0.3) 100%);
+}
+
+.activetabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+  height: 5px;
+}
+
+.content {
+  padding: 20px;
+  width: 45dvw;
+  min-width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #172546;
+}
+
+.activecontent {
+  display: block;
+  border: 2px solid transparent;
+  border-top: none;
+  border-image-repeat: round;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to top, #004bef 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(1, 75, 239, 0.3) 0%, rgba(23, 37, 70, 0.3) 100%);
+}
+
+.gradienbutton {
+  border: 2px solid transparent;
+  border-top: none;
+  border-image-repeat: round;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to top, #f7d80e 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(247, 216, 14, 0.3) 0%, rgba(31, 50, 79, 0.3) 60%);
+  cursor: pointer;
+}
+
+/* Styling codingan accordion */

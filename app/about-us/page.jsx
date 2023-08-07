@@ -3,10 +3,12 @@
 import { useState } from "react";
 
 import Image from "next/image";
-
-import Modal from "@/app/about-us/_components/modal";
-import Footer from "@/components/footer";
 import Link from "next/link";
+
+import Modal from "@/app/about-us/_components/about-modal";
+import Footer from "@/components/footer";
+
+import styles from "@/public/styles/about.module.css";
 
 export default function AboutUs() {
   const [showModal, setShowModal] = useState(false);
@@ -26,18 +28,16 @@ export default function AboutUs() {
             <span className="text-white font-semibold italic relative z-[5] mb-[-3dvw] md:mb-[-2.5dvw] lg:mb-[-1.4dvw] mx-3 text-xs md:text-lg lg:text-xl">
               About Us
             </span>
-            <div className={"about w-full"}></div>
+            <div className={`${styles.about} w-full`}></div>
           </div>
           <span className="mt-[4vh] text-white font-semibold flex justify-center md:hidden">About Us</span>
 
           <div
-            className={"templategrid mx-auto w-[80dvw] md:w-screen flex justify-center gap-[2vw] mt-[5vh] lg:mt-[2vh]"}
+            className={`${styles.templategrid} mx-auto w-[80dvw] md:w-screen flex justify-center gap-[2vw] mt-[5vh] lg:mt-[2vh]`}
           >
             {/* bagian character */}
             <div
-              className={
-                "gradien character flex flex-col justify-between px-[1vw] py-[1vh] md:py-[2vh] lg:py-[2vh] min-h-[25dvh] md:min-h-[55vh] lg:min-h-[38dvh] min-w-[40dvw] lg:min-w-[20dvw]"
-              }
+              className={`${styles.gradien} ${styles.character} flex flex-col justify-between px-[1vw] py-[1vh] md:py-[2vh] lg:py-[2vh] min-h-[25dvh] md:min-h-[55vh] lg:min-h-[38dvh] min-w-[40dvw] lg:min-w-[20dvw]`}
               onClick={() => setShowModal(true)}
             >
               <div className="w-[15dvw] h-[15dvw] md:w-[20dvw] md:h-[20dvw] lg:w-[5dvw] lg:h-[5dvw] relative block">
@@ -51,9 +51,7 @@ export default function AboutUs() {
 
             {/* bagian sdg */}
             <div
-              className={
-                "gradien sdg flex flex-row-reverse lg:flex-col justify-between items-center lg:items-start px-[1vw] py-[1vh] w-full min-h-[10vh] md:min-h-[20vh]"
-              }
+              className={`${styles.gradien} ${styles.sdg} flex flex-row-reverse lg:flex-col justify-between items-center lg:items-start px-[1vw] py-[1vh] w-full min-h-[10vh] md:min-h-[20vh]`}
               onClick={() => setShowModal2(true)}
             >
               <div className="w-[15dvw] h-[15dvw] md:w-[10dvw] md:h-[10dvw] lg:w-[3dvw] lg:h-[3dvw] relative block">
@@ -67,9 +65,7 @@ export default function AboutUs() {
 
             {/* bagian logo */}
             <div
-              className={
-                "gradien logo flex flex-col justify-between lg:mt-[7vh] px-[1vw] py-[0.5vh] md:py-[2vh] lg:py-[2vh] min-h-[25dvh] md:min-h-[55vh] lg:min-h-[38dvh] min-w-[30dvw] lg:min-w-[30dvw]"
-              }
+              className={`${styles.gradien} ${styles.logo} flex flex-col justify-between lg:mt-[7vh] px-[1vw] py-[0.5vh] md:py-[2vh] lg:py-[2vh] min-h-[25dvh] md:min-h-[55vh] lg:min-h-[38dvh] min-w-[30dvw] lg:min-w-[30dvw]`}
               onClick={() => setShowModal3(true)}
             >
               <div className="w-[16dvw] h-[16dvw] md:w-[20dvw] md:h-[20dvw] lg:w-[7dvw] lg:h-[7dvw] relative block">
@@ -83,10 +79,7 @@ export default function AboutUs() {
 
             {/* tombol back */}
             <div
-              c
-              className={
-                "gradienbutton back mx-auto flex flex-col justify-center items-center min-h-[6dvh] md:min-h-[10vh] max[1023px]:max-w-[30dvw] min-w-[40dvw] md:min-w-[12dvw]"
-              }
+              className={`${styles.gradienbutton} ${styles.back} mx-auto flex flex-col justify-center items-center min-h-[6dvh] md:min-h-[10vh] max[1023px]:max-w-[30dvw] min-w-[40dvw] md:min-w-[12dvw]`}
             >
               <Link
                 href={"/"}
@@ -98,9 +91,7 @@ export default function AboutUs() {
 
             {/* bagian tema */}
             <div
-              className={
-                "gradien tema to-transparent flex flex-col justify-between px-[1vw] py-[1vh] md:py-[2vh] lg:py-[2vh] min-h-[20dvh] md:min-h-[55vh] lg:min-h-[38dvh] min-w-[50dvw] lg:min-w-[20dvw]"
-              }
+              className={`${styles.gradien} ${styles.tema} to-transparent flex flex-col justify-between px-[1vw] py-[1vh] md:py-[2vh] lg:py-[2vh] min-h-[20dvh] md:min-h-[55vh] lg:min-h-[38dvh] min-w-[50dvw] lg:min-w-[20dvw]`}
               onClick={() => setShowModal4(true)}
             >
               <div className="w-[15dvw] h-[15dvw] md:w-[20dvw] md:h-[20dvw] lg:w-[5dvw] lg:h-[5dvw] relative block">
@@ -114,9 +105,7 @@ export default function AboutUs() {
 
             {/* bagian zachery */}
             <div
-              className={
-                "gradien zachery flex flex-col justify-between px-[1vw] py-[0.5vh] md:py-[2vh] lg:py-[2vh] min-h-[20dvh] md:min-h-[40vh] lg:min-h-[30dvh] min-w-[30dvw] lg:min-w-[22dvw]"
-              }
+              className={`${styles.gradien} ${styles.zachery} flex flex-col justify-between px-[1vw] py-[0.5vh] md:py-[2vh] lg:py-[2vh] min-h-[20dvh] md:min-h-[40vh] lg:min-h-[30dvh] min-w-[30dvw] lg:min-w-[22dvw]`}
               onClick={() => setShowModal5(true)}
             >
               <div className="w-[15dvw] h-[15dvw] md:w-[20dvw] md:h-[20dvw] lg:w-[5dvw] lg:h-[5dvw] relative block">

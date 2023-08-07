@@ -1,0 +1,143 @@
+.about {
+  aspect-ratio: 7 / 1;
+  background: url("../assets/borders/border-about.png");
+  background-size: cover;
+  background-position: start;
+  background-repeat: no-repeat;
+}
+
+.gradien {
+  border: 3px solid transparent;
+  border-top: none;
+  border-image-repeat: round;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to top, #004bef 0%, transparent 100%);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.gradienbutton {
+  border: 3px solid transparent;
+  border-top: none;
+  border-image-repeat: round;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to top, #f7d80e 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(247, 216, 14, 0.3) 0%, rgba(31, 50, 79, 0.3) 60%);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.gradienbackmodal {
+  border: 3px solid transparent;
+  border-top: none;
+  border-image-repeat: round;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to top, #ffffff 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3) 0%, rgba(31, 50, 79, 0.5) 40%);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.modal {
+  border: 3px solid transparent;
+  border-top: none;
+  border-image-repeat: round;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to top, #004bef 0%, transparent 100%);
+}
+
+.character {
+  grid-area: character;
+  background: url("../assets/backgrounds/bg-committee.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sdg {
+  grid-area: sdg;
+  background: url("../assets/backgrounds/bg-value.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  grid-area: logo;
+  background: url("../assets/backgrounds/bg-logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.back {
+  grid-area: back;
+  width: 100%;
+}
+
+.tema {
+  grid-area: tema;
+  background: url("../assets/backgrounds/bg-theme.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.zachery {
+  grid-area: zachery;
+  background: url("../assets/backgrounds/bg-zachery.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.character,
+.sdg,
+.back,
+.logo,
+.tema,
+.zachery {
+  transition: background-size 0.5s ease;
+  background-size: 140%;
+  background-position: center;
+}
+
+.character:hover,
+.sdg:hover,
+.back:hover,
+.logo:hover,
+.tema:hover,
+.zachery:hover {
+  background-size: 160%;
+  filter: brightness(1.5);
+  box-shadow: 0px 0px 5px #004bef;
+}
+
+.templategrid {
+  display: grid;
+  grid-template-areas:
+    "character logo tema"
+    "character logo tema"
+    "character logo tema"
+    "character logo zachery"
+    "sdg logo zachery"
+    "sdg back zachery";
+}
+
+@media (max-width: 1023px) {
+  .templategrid {
+    display: grid;
+    grid-gap: 3vw;
+    grid-template-areas:
+      "character logo"
+      "tema zachery"
+      "sdg sdg"
+      ". ."
+      ". ."
+      ". ."
+      "back back";
+  }
+  .back {
+    width: 60dvw;
+  }
+}
