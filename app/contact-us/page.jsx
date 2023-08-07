@@ -28,7 +28,7 @@ export default function ContactUs() {
 
       <div className="flex flex-col items-center ">
         <div className="gap-4 w-[90dvw] my-8 text-white grid grid-cols-2 md:grid-cols-4">
-          <Link
+          <a
             href="mailto:mentoring@umn.ac.id"
             className={` ${styles.bg} p-4 md:w-full h-[40vh] md:h-[50vh] flex flex-row items-center justify-center text-center text-[2.5vw] md:text-[1.5vw] lg:text-[1.5vw] hover:-translate-y-1.5 hover:relative hover:z-10 transition-all`}
           >
@@ -39,8 +39,7 @@ export default function ContactUs() {
               </div>
               <p className="text-[1.6vh] md:text-base">mentoring@umn.ac.id</p>
             </div>
-          </Link>
-
+          </a>
           <Link
             href="https://instagram.com/mentoringumn"
             target="blank"
