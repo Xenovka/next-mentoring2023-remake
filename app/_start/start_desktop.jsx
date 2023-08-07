@@ -108,7 +108,7 @@ export default function Start() {
                 </h1>
               </Link>
               <Link
-                href="/contactus"
+                href="/contact-us"
                 className="relative flex w-80 mx-auto mt-28 hover:translate-y-[-5px] transition-transform duration-300"
               >
                 <Image
