@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { DivisionContext } from "@/app/divisi/_context/division-context";
 
 import "swiper/css";
-import "swiper/css/navigation";
 
 export default function DivisionSwiper({ divisionData }) {
   const { setCurrentIndex } = useContext(DivisionContext);
