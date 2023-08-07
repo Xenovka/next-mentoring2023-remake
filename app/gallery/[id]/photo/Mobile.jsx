@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Footer from "@/components/footer";
 
 export default function Mobile({ gallery }) {
   const path = usePathname();
@@ -53,9 +54,7 @@ export default function Mobile({ gallery }) {
         </div>
       </div>
 
-      <div className="mx-auto mt-10 pb-4">
-        <h1 className="text-sm italic text-[#9BCDEC] text-center">copyright © 2023 Mentoring UMN</h1>
-      </div>
+      <Footer />
     </div>
   );
 }

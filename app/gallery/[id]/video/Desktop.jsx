@@ -4,12 +4,14 @@ import Image from "next/image";
 import { useState } from "react";
 import styles from "@/public/styles/gallery.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation } from "swiper";
+import SwiperCore from "swiper";
+import { Navigation } from "swiper/modules";
 import ReactPlayer from "react-player";
 import "swiper/css";
 import "swiper/css/navigation";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Footer from "@/components/footer";
 SwiperCore.use([Navigation]);
 
 export default function Desktop({ gallery }) {
@@ -75,12 +77,7 @@ export default function Desktop({ gallery }) {
           </button>
         </div>
       </div>
-      <div className="relative mt-24">
-        <div className="absolute text-center left-1/2 -translate-x-1/2 bottom-10 text-[#9BCDEC]">
-          <h1 className=" text-4xl italic ">#PerceivePursuePersevere</h1>
-          <h6 className="opacity-30 text-sm">copyright © 2023 Mentoring UMN</h6>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }

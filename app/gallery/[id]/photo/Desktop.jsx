@@ -5,6 +5,7 @@ import { useState } from "react";
 import styles from "@/public/styles/gallery.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Footer from "@/components/footer";
 
 export default function PhotoDesktop({ gallery }) {
   const imagesPerPage = 15; // Number of images to display per page
@@ -106,12 +107,7 @@ export default function PhotoDesktop({ gallery }) {
           </button>
         </div>
       </div>
-      <div className="relative mt-24">
-        <div className="absolute text-center left-1/2 -translate-x-1/2 bottom-10 text-[#9BCDEC]">
-          <h1 className=" text-4xl italic ">#PerceivePursuePersevere</h1>
-          <h6 className="opacity-30 text-sm">copyright © 2023 Mentoring UMN</h6>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }
