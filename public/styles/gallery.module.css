@@ -1,0 +1,80 @@
+.rect::-webkit-scrollbar {
+  /* scrollbar-width: thin; */
+  /* scrollbar-color: blue; */
+  color: #000;
+}
+
+.rect::-webkit-scrollbar-track {
+  background: #172546;
+  border-radius: 10px;
+}
+
+.rect::-webkit-scrollbar-thumb {
+  background: #8fc3ea;
+  border: 5px solid #172546;
+  border-radius: 10px;
+}
+
+.yellowbtn {
+  border: 3px solid transparent;
+  border-top: none;
+  border-image-repeat: none;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to top, #f7d80e 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(247, 216, 14, 0.3) 0%, rgba(31, 50, 79, 0.3) 60%);
+  cursor: pointer;
+}
+
+.whitebtn {
+  border: 3px solid transparent;
+  border-top: none;
+  border-image-repeat: none;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to top, #fff 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3) 0%, rgba(31, 50, 79, 0.3) 60%);
+  cursor: pointer;
+}
+
+.bluebtn {
+  border: 3px solid transparent;
+  border-top: none;
+  border-image-repeat: none;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to top, #004bef 0%, transparent 100%);
+  background-image: linear-gradient(to top, #1f324f 0%, #1f324f30 60%);
+  cursor: pointer;
+}
+
+.title {
+  aspect-ratio: 7 / 1;
+  background: url("../assets/borders/border-about.png");
+  background-size: cover;
+  background-position: start;
+  background-repeat: no-repeat;
+}
+
+.list::-webkit-scrollbar {
+  color: #000;
+}
+
+.list::-webkit-scrollbar-track {
+  direction: rtl;
+  background: #172546;
+  border-radius: 10px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  direction: rtl;
+  background: #8fc3ea;
+  border: 5px solid #172546;
+  border-radius: 10px;
+}
+.list {
+  direction: rtl;
+}
+
+.active {
+  background-image: linear-gradient(to top, rgba(0, 75, 239, 0.5) 0%, rgba(23, 37, 70, 0.3) 60%);
+  border-bottom: 1px solid transparent;
+  background-color: #172546;
+}
