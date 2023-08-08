@@ -76,7 +76,7 @@ export default function PhotoDesktop({ gallery }) {
                 </a>
               )}
 
-              {Array.from({ length: Math.ceil(photos.length / imagesPerPage) }, (_, i) => (
+              {Array.from({ length: Math.ceil(gallery.length / imagesPerPage) }, (_, i) => (
                 <a
                   href="#"
                   key={i}
@@ -87,7 +87,7 @@ export default function PhotoDesktop({ gallery }) {
                 </a>
               ))}
 
-              {currentPage < Math.ceil(photos.length / imagesPerPage) && (
+              {currentPage < Math.ceil(gallery.length / imagesPerPage) && (
                 <a
                   href="#"
                   className="pr-3 py-1 rounded-r-md text-white"
@@ -107,7 +107,9 @@ export default function PhotoDesktop({ gallery }) {
           </button>
         </div>
       </div>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
