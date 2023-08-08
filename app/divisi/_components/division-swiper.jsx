@@ -20,6 +20,8 @@ export default function DivisionSwiper({ divisionData }) {
   };
 
   const onDataChanged = (swiper) => {
+    if (swiper.clickedIndex === undefined) return;
+
     setCurrentIndex(swiper.clickedIndex);
   };
 
