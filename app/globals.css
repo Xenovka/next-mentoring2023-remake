@@ -140,3 +140,11 @@ body {
     color-stop(0.98, transparent)
   );
 }
+
+.selected-swiper {
+  height: 6rem;
+}
+
+.swiper-wrapper {
+  align-items: end;
+}

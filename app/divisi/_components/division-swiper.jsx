@@ -7,7 +7,7 @@ import { DivisionContext } from "@/app/divisi/_context/division-context";
 import "swiper/css";
 
 export default function DivisionSwiper({ divisionData }) {
-  const { setCurrentIndex } = useContext(DivisionContext);
+  const { currentIndex, setCurrentIndex } = useContext(DivisionContext);
 
   const handleScreenSize = (swiper) => {
     const width = window.innerWidth;
@@ -24,17 +24,17 @@ export default function DivisionSwiper({ divisionData }) {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="w-auto flex justify-center">
       <div className="w-9/12 mt-10">
         <Swiper
-          className="h-16"
+          grabCursor={true}
           spaceBetween={10}
           slidesPerView={5}
           onSwiper={(swiper) => handleScreenSize(swiper)}
           onClick={(swiper) => onDataChanged(swiper)}
         >
           {divisionData &&
-            divisionData.map((item) => {
+            divisionData.map((item, index) => {
               return (
                 <SwiperSlide
                   style={{
@@ -44,10 +44,18 @@ export default function DivisionSwiper({ divisionData }) {
                     borderImageSource: `linear-gradient(to top, ${item.color} 0%, transparent 80%)`,
                     backgroundImage: `linear-gradient(to top, ${item.rgbaColor} -40%, rgba(40, 117, 180, 0.1) 90%)`
                   }}
-                  className="cursor-pointer"
+                  className="flex justify-center"
                   key={item.key}
                 >
-                  <div className="h-full flex justify-center items-center text-center">{item.name}</div>
+                  <div className="flex justify-center items-center h-full">
+                    <div
+                      className={`flex justify-center items-center text-center ${
+                        index === currentIndex ? "selected-swiper" : "h-16"
+                      }`}
+                    >
+                      {item.name}
+                    </div>
+                  </div>
                 </SwiperSlide>
               );
             })}
