@@ -55,15 +55,18 @@ export default function BadgeName() {
             </div>
             <Modal isVisible={showModal} setStage={setStage} stage={stage}>
                 {
-                    stage === 1 ? <Notif /> : 
-                    stage === 2 ? <FormData /> :
-                    stage === 3 ? <CharacterSelection setStage={setStage}/> :
-                    stage === 4 ? <CharacterDetails setStage={setStage} characters={characters[0]}/> : 
-                    stage === 5 ? <CharacterDetails setStage={setStage} characters={characters[1]}/> : 
-                    stage === 6 ? <CharacterDetails setStage={setStage} characters={characters[2]}/> : 
-                    stage === 7 ? <CharacterDetails setStage={setStage} characters={characters[3]}/> : 
-                    stage === 8 ? <Preview setStage={setStage}/> : 
-                    <h1>Done</h1>
+                    stage === 1 ? <Notif /> :
+                        stage === 2 ? <FormData /> :
+                            stage === 3 ? <CharacterSelection setStage={setStage} /> :
+                                stage === 4 ? <CharacterDetails setStage={setStage} characters={characters[0]} /> :
+                                    stage === 5 ? <CharacterDetails setStage={setStage} characters={characters[1]} /> :
+                                        stage === 6 ? <CharacterDetails setStage={setStage} characters={characters[2]} /> :
+                                            stage === 7 ? <CharacterDetails setStage={setStage} characters={characters[3]} /> :
+                                                stage === 8 ? <Preview setStage={setStage} /> :
+                                                    <button className="bg-black" onClick={() => {
+                                                        setShowModal(false)
+                                                        setStage(1)
+                                                    }}>Tulisan apapun</button>
                 }
             </Modal>
 

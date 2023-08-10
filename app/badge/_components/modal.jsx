@@ -13,7 +13,8 @@ export default function Modal({ isVisible, setStage, stage, children, bg }) {
                 >
                     <div>{children}</div>
                     <button
-                        className={`${styles.gradienbackmodal} w-[25dvw] md:w-[14dvw] h-[7dvh] text-[4dvw] md:text-[1.2dvw] font-semibold fixed bottom-10 left-1/2 -translate-x-2/4 mb-2 ${stage === 3 && "hidden"}`}
+                        className={`${styles.gradienbackmodal} w-[25dvw] md:w-[14dvw] h-[7dvh] text-[4dvw] md:text-[1.2dvw] font-semibold fixed bottom-10 left-1/2 -translate-x-2/4 mb-2 
+                        ${stage === 3 || stage >= 9 && "hidden"}`}
                         onClick={() => {
                             console.log(stage)
                             if (stage < 4 || stage > 7) {
