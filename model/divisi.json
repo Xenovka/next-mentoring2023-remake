@@ -1,0 +1,238 @@
+{
+  "data": [
+    {
+      "key": "G",
+      "name": "Accomodation",
+      "description": "Divisi Accommodations bertanggung jawab dan menyediakan akomodasi yang diperlukan untuk keberlangsungan kegiatan Character Building Mentoring 2023.",
+      "members": [
+        "Berlian Theofilia",
+        "Jason Kurniawan",
+        "Bonifasius Martin Wibawa",
+        "Jevon Tjuang",
+        "Malik Bazil Rabbani",
+        "Gervasius Geovan",
+        "Vincent Thayib",
+        "Catherine Ramlian",
+        "Fathan Zakiyan",
+        "Muhammad Ravindra Mahesandra",
+        "Edwardus Adhitya Setyonugroho",
+        "Ernesto Guevara Carceres",
+        "Rhauma Syira Anggina",
+        "Farhan Ammar Hakim",
+        "Nathaniel Ezra Anasbi",
+        "Andreas Davin Yudha Kristanto"
+      ],
+      "image": "https://i.ibb.co/c8LWYx5/ACCOMMODATION.png",
+      "color": "#0097a7",
+      "rgbaColor": "rgba(0, 151, 167, 0.3)"
+    },
+    {
+      "key": "K",
+      "name": "Website",
+      "description": "Divisi Website bertugas untuk membuat dan merancang website Character Building Mentoring 2023 selama keberlangsungan kegiatan Character Building Mentoring 2023.",
+      "members": [
+        "Fernando Khorasani",
+        "Lifosmin Simon",
+        "Trisha Huang",
+        "Wendyanto",
+        "Koong Pok",
+        "Patricia Theodora Darmawan",
+        "Raphael Gregorius Hakim",
+        "Obie Krisnanto",
+        "Axel Andrean Handokov"
+      ],
+      "image": "https://i.ibb.co/sbCTJ2d/WEBSITE.png",
+      "color": "#2875b4",
+      "rgbaColor": "rgba(40, 117, 180, 0.3)"
+    },
+    {
+      "key": "E",
+      "name": "Visual",
+      "description": "Divisi Visual bertugas untuk merealisasikan kebutuhan visual dan desain yang akan digunakan selama kegiatan Character Building Mentoring 2023.",
+      "members": [
+        "Gabriela Febriani Prasada",
+        "Allysha Mizeliana Garsadi",
+        "Thessalonica Aulia Purnomo",
+        "Mumtaz Alkhwarizmi Sabri",
+        "Angelique Kelly Christian",
+        "Felicya Christy",
+        "I Putu Ari Sastra"
+      ],
+      "image": "https://i.ibb.co/87Szk08/VISUAL.png",
+      "color": "#c27ba0",
+      "rgbaColor": "rgba(194, 123, 160, 0.3)"
+    },
+    {
+      "key": "Z",
+      "name": "Executive Committee",
+      "description": "",
+      "members": ["Cheryl Agata Paramitha", "Adrix Richard Stanlee", "Milka Angela Ong", "Vanessa Anabelle Herlin"],
+      "image": "https://i.ibb.co/Sr1zpn7/EXECUTIVE-COMMITTEE.png",
+      "color": "#ffffff",
+      "rgbaColor": "rgba(255, 255, 255, 0.3)"
+    },
+    {
+      "key": "D",
+      "name": "Documentation",
+      "description": "Divisi Documentation bertugas untuk mendokumentasikan momen-momen selama kegiatan Character Building Mentoring 2023.",
+      "members": [
+        "Christopher Ryan",
+        "Charlotte Yeung",
+        "Felix Ansell Atari Christian",
+        "Alenzo Leksana",
+        "Fulgentius Filbert Suryawan",
+        "Andrew Su",
+        "Fajar Faturahman",
+        "Brandon Samuel Sasmita",
+        "Vernando K'han s",
+        "Hariyanto Suryapati",
+        "Mario Rivaldo",
+        "Christoforus Arkana Putra",
+        "Haezer Limanjaya"
+      ],
+      "image": "https://i.ibb.co/s5VVcRJ/DOCUMENTATION.png",
+      "color": "#9900ff",
+      "rgbaColor": "rgb(153, 0, 255, 0.3)"
+    },
+    {
+      "key": "J",
+      "name": "Administration",
+      "description": "Divisi Administration bertugas untuk melakukan pendataan dan menyiapkan data administrasi yang dibutuhkan di kegiatan Character Building Mentoring 2023.",
+      "members": [
+        "Gabriella Josellyn Goeswadarus",
+        "Ignatia Sarasvati Wahyuputro",
+        "Kezya Carla Hartono",
+        "Edmund Daniel Valentino",
+        "Priscillia Desya",
+        "Beverly Vladislav Tan",
+        "Bryan Jonathan",
+        "Jacqlien Cellia Suryanto",
+        "Felicia Athalia Chandra"
+      ],
+      "image": "https://i.ibb.co/dgdFf48/ADMINISTRATION.png",
+      "color": "#93c47d",
+      "rgbaColor": "rgb(147, 196, 125, 0.3)"
+    },
+    {
+      "key": "A",
+      "name": "Mentor",
+      "description": "Divisi Mentor bertugas untuk membimbing Mentee dalam menjalankan seluruh kegiatan Character Building Mentoring 2023.",
+      "members": [
+        "Nathanael Rio Setiawan",
+        "Michelle Angela Putri Triana",
+        "Brooklyn Racquella Liem",
+        "Joshua Hasbi Suryanto",
+        "Evelyn Chanry",
+        "Rachma Azahra Ramadhani",
+        "Devani Hizkia Budiman",
+        "Beatrice Angellie",
+        "Marcelline Tjhin",
+        "Cosmas Damiano Sodho",
+        "Selvi Natalia",
+        "Brilliana Thalia Wijaya"
+      ],
+      "image": "https://i.ibb.co/ZVNnNxB/MENTOR.png",
+      "color": "#ff9900",
+      "rgbaColor": "rgb(255, 153, 0, 0.3)"
+    },
+    {
+      "key": "F",
+      "name": "Research",
+      "description": "Divisi Research bertugas untuk menyusun metode untuk evaluasi Character Building Mentoring 2023.",
+      "members": [
+        "Debora Angelina Anugrah",
+        "Angelina Yang",
+        "Claditte Qisthidarari",
+        "Justin Christian Hamzah",
+        "Stella Chan",
+        "Fernando Devano",
+        "Nicholas Pranata",
+        "Livia Florenza Harianto",
+        "Muhammad Sultan Faraj"
+      ],
+      "image": "https://i.ibb.co/T0XSXht/RESEARCH.png",
+      "color": "#bb7a0a",
+      "rgbaColor": "rgb(187, 122, 10, 0.3)"
+    },
+    {
+      "key": "B",
+      "name": "Content Creator",
+      "description": "Divisi Content Creator bertugas untuk merancang konsep dan materi untuk acara Character Building Mentoring 2023, membuat modul materi untuk Mentee dan membantu koordinasi materi untuk pelatihan Mentor.",
+      "members": [
+        "Christabell Grace Chalin",
+        "Olivia Laurent",
+        "Jonathan Setyohadi",
+        "Oxana Matus",
+        "Laticia Terrene Gunawan",
+        "Alecia Cindy",
+        "Servina Viviene Tjindana",
+        "Genoveva Joceline Valencia",
+        "Christopher Valerie Menak"
+      ],
+      "image": "https://i.ibb.co/dPcj0gd/CONTENT-CREATOR.png",
+      "color": "#f7d80f",
+      "rgbaColor": "rgb(247, 216, 15, 0.3)"
+    },
+    {
+      "key": "I",
+      "name": "Insurer",
+      "description": "Divisi Insurer bertugas untuk menjaga keamanan dan ketertiban kegiatan Character Building Mentoring 2023 serta membuat peraturan yang akan digunakan di Character Building Mentoring 2023.",
+      "members": [
+        "Khaleb Andhyka Aprijadi",
+        "Disty Dhama Yanti Saputri",
+        "Jovanka Suryajaya",
+        "Yosua Vido Nugroho",
+        "Dio Isai Tanneri",
+        "Rich Marvin Lim",
+        "Jefferson Marvel Tjhin",
+        "Michelle Patricia",
+        "Christy Angela Limardi",
+        "Jovita Angelina Mettasari",
+        "Josua Rivo Muin",
+        "Feodora Audrey Clementine",
+        "Aurelio Bryant Asali",
+        "Alan Prastowo",
+        "Edward Fernando",
+        "Valentino Anwar",
+        "Shabira Regita Primaswari Dias",
+        "Christopher Abie Diaz Doviano",
+        "Naufal Radhitya Daniswara",
+        "Ivonne Sekar Hanna",
+        "Nathanael Bernike",
+        "Justin",
+        "Hino",
+        "Natasha Devi",
+        "Diaz Bennaya",
+        "Zahra Kusuma Dewi",
+        "Khansa Putri Arista",
+        "Virgi Nanca Lorizkian",
+        "Audrey Aprillia Fauzkha",
+        "Anastasha Angeline Winata",
+        "Raya Andhika Rafasuni",
+        "Darren Chopin Santoso"
+      ],
+      "image": "https://i.ibb.co/k96tQdN/INSURER.png",
+      "color": "#595959",
+      "rgbaColor": "rgb(89, 89, 89, 0.3)"
+    },
+    {
+      "key": "C",
+      "name": "Public Relation & Media Partner",
+      "description": "Divisi Public Relation dan Media Partner bertugas untuk merancang konten dan mengelola kegiatan publikasi seputar kegiatan Character Building Mentoring 2023 serta menjalankan kerjasama dengan media partner.",
+      "members": [
+        "Celine Marvella",
+        "Caroline Indira Setiawan",
+        "Vrisney Tanueve",
+        "Laurel Tagara Hartono",
+        "Keisha Fidelia Willie",
+        "Gabriella Nadine Sekarningtyas",
+        "Felicia Viana Lim",
+        "Nathania Aurelia",
+        "Vanessa Vernadeth"
+      ],
+      "image": "https://i.ibb.co/WVYkp1x/PUBLIC-RELATION.png",
+      "color": "#e06666",
+      "rgbaColor": "rgb(224, 102, 102, 0.3)"
+    }
+  ]
+}

@@ -5,12 +5,15 @@ import DivisionHeader from "@/app/divisi/_components/division-header";
 
 import { DivisionContextProvider } from "@/app/divisi/_context/division-context";
 
+const ENDPOINT = process.env.NEXT_PUBLIC_API_ENDPOINT;
+
 export default async function Divisi() {
   async function getData() {
-    const response = await fetch(process.env.NEXT_PUBLIC_API_URL);
-    const body = response.json();
+    const response = await fetch(`${ENDPOINT}/api`, {
+      method: "GET"
+    });
 
-    return body;
+    return await response.json();
   }
 
   // Fetch data from API asycronously
