@@ -4,29 +4,65 @@ import React, { useState } from "react";
 export default function CharacterSelection({ setStage }) {
   const data = [
     {
-      img: "/assets/characters/thinker.png",
-      alt: "Thinker",
+      img: "/assets/characters/leader-male.png",
+      alt: "leader",
+      text: "Leader",
+      color: "text-[#72ACE5]",
+    },
+    {
+      img: "/assets/characters/thinker-male.png",
+      alt: "thinker",
       text: "Thinker",
       color: "text-[#72ACE5]",
     },
     {
-      img: "/assets/characters/support.png",
-      alt: "Support",
+      img: "/assets/characters/support-male.png",
+      alt: "support",
       text: "Support",
       color: "text-[#CADBC2]",
     },
     {
-      img: "/assets/characters/passionate.png",
-      alt: "Passionate",
+      img: "/assets/characters/passionate-male.png",
+      alt: "passionate",
       text: "Passionate",
       color: "text-[#F9EF83]",
     },
     {
-      img: "/assets/characters/neutral.png",
-      alt: "Neutral",
+      img: "/assets/characters/neutral-male.png",
+      alt: "neutral",
       text: "Neutral",
       color: "text-[#E5BEBE]",
     },
+    // {
+    //   img: "/assets/characters/leader-female.png",
+    //   alt: "leader",
+    //   text: "LEader",
+    //   color: "text-[#72ACE5]",
+    // },
+    // {
+    //   img: "/assets/characters/thinker-female.png",
+    //   alt: "thinker",
+    //   text: "Thinker",
+    //   color: "text-[#72ACE5]",
+    // },
+    // {
+    //   img: "/assets/characters/support-female.png",
+    //   alt: "support",
+    //   text: "Support",
+    //   color: "text-[#CADBC2]",
+    // },
+    // {
+    //   img: "/assets/characters/passionate-female.png",
+    //   alt: "passionate",
+    //   text: "Passionate",
+    //   color: "text-[#F9EF83]",
+    // },
+    // {
+    //   img: "/assets/characters/neutral-female.png",
+    //   alt: "neutral",
+    //   text: "Neutral",
+    //   color: "text-[#E5BEBE]",
+    // },
   ];
 
   return (
