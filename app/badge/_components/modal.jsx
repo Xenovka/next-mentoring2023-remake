@@ -1,6 +1,6 @@
 import styles from "@/public/styles/about.module.css";
 
-export default function Modal({ isVisible, setStage, stage, children, bg }) {
+export default function Modal({ isVisible, children, bg }) {
   if (!isVisible) return null;
 
   return (
@@ -12,21 +12,6 @@ export default function Modal({ isVisible, setStage, stage, children, bg }) {
           className={`w-full h-full flex flex-col justify-evenly items-center overflow-scroll overflow-x-hidden hidescroll`}
         >
           <div className="w-full">{children}</div>
-          <button
-            className={`${styles.gradienbackmodal} 
-            w-60 h-10 text-base font-semibold flex justify-center items-center
-            ${stage === 3 || (stage >= 9 && "hidden")}`}
-            onClick={() => {
-              // console.log(stage);
-              if (stage < 4 || stage > 7) {
-                setStage(stage + 1);
-              } else {
-                setStage(8);
-              }
-            }}
-          >
-            Continue
-          </button>
         </div>
       </div>
     </div>

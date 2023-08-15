@@ -1,6 +1,7 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { fabric } from 'fabric';
 import { Manrope } from 'next/font/google';
+import styles from "@/public/styles/about.module.css";
 
 const manrope700 = Manrope({
     weight: '700',
@@ -14,10 +15,10 @@ const manrope400 = Manrope({
     display: 'swap',
 })
 
-export default function Preview() {
+export default function Preview({ setStage, selected, setShowModal }) {
     const canvasRef = useRef(null);
-    const canvasObj = useRef(null)
-
+    const canvasObj = useRef(null);
+    // const [image, setImage] = useState(selected.image + "-male.png");
     function createText(left, top, text, fontSize = 20, font = manrope400) {
         return new fabric.Text(text, {
             left: left,
@@ -33,12 +34,19 @@ export default function Preview() {
     }
 
     useEffect(() => {
+        const gender = localStorage.getItem("gender")
+        let selectedImage
+        if (!gender) {
+            setStage(2)
+        } else {
+            selectedImage = `${selected.image}-${gender}.png`
+        }
         const badge = new fabric.Canvas(canvasRef.current, {
             height: 480,
             width: 854,
             selection: false
         })
-        fabric.Image.fromURL('/assets/characters/passionate.png', (img) => {
+        fabric.Image.fromURL(selectedImage, (img) => {
             img.scaleToWidth(360);
             img.set({
                 left: 0,
@@ -80,29 +88,16 @@ export default function Preview() {
         badge.renderAll();
         canvasObj.current = badge;
         return () => {
-            badge.dispose();
+            // Dispose the canvas only if it exists
+            if (canvasObj.current) {
+                canvasObj.current.dispose();
+                canvasObj.current = null; // Set canvasObj to null after disposing
+            }
         };
+
     }, []);
 
     const downloadImage = () => {
-        // Create a temporary canvas to scale the content
-        // const newCanvas = new fabric.StaticCanvas(null, {
-        //     height: 540,
-        //     width: 960,
-        // });
-        // // Scale up the content from the original canvas to the temporary canvas
-        // const factor = 960 / 854;
-        // console.log(factor)
-        // const objects = canvasObj.current.getObjects();
-        // objects.forEach((obj) => {
-        //     const clonedObj = fabric.util.object.clone(obj);
-        //     clonedObj.scaleX *= factor;
-        //     clonedObj.scaleY *= factor;
-        //     clonedObj.left *= factor;
-        //     clonedObj.top *= factor;
-        //     newCanvas.add(clonedObj);
-        // });
-
         // Generate the data URL with the desired quality (multiplier)
         const dataURL = canvasObj.current.toDataURL({
             format: 'png',
@@ -114,12 +109,12 @@ export default function Preview() {
         link.download = 'Badge'; // Set the desired file name
         link.click(); //automatic download
     };
-    
+
     return (
-        <div className="w-full">
+        <div className="flex flex-col mx-40 justify-center items-center">
             Print Your Badge
             <div className="flex flex-col items-center">
-                <canvas ref={canvasRef} id="canvas" width="400" height="400" className="border-2 border-yellow-200" />
+                <canvas ref={canvasRef} id="canvas" width="400" height="300" className="border-2 border-yellow-200" />
                 <button
                     className={`font-semibold bg-yellow-300/50 rounded-lg px-4 py-2 mt-4`}
                     onClick={downloadImage}
@@ -127,7 +122,23 @@ export default function Preview() {
                     Download Image
                 </button>
             </div>
-
+            <button
+                className={`${styles.gradienbackmodal} w-60 h-10 text-base font-semibold flex justify-center items-center`}
+                onClick={() => {
+                    setShowModal(false)
+                    setStage(1)
+                }}
+            >
+                Continue
+            </button>
+            <button
+                className={`${styles.gradienbackmodal} w-60 h-10 text-base font-semibold flex justify-center items-center`}
+                onClick={() => {
+                    setStage(3)
+                }}
+            >
+                back
+            </button>
         </div>
     )
 }

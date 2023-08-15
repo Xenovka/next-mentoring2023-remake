@@ -10,55 +10,41 @@ import Preview from './_components/Preview';
 export default function BadgeName() {
     const [showModal, setShowModal] = useState(false);
     const [stage, setStage] = useState(1);
+    const [selected, setSelected] = useState()
     const characters = [
         {
-            "image": "/assets/characters/leader-male.png",
+            "image": "/assets/characters/leader",
             "title": "Leader",
+            "alt": "Leader",
+            "color": "",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
         },
         {
-            "image": "/assets/characters/leader-fmale.png",
-            "title": "Leader",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
-        },
-        {
-            "image": "/assets/characters/thinker-male.png",
+            "image": "/assets/characters/thinker",
             "title": "Thinker",
+            "alt": "Thinker",
+            "color": "text-[#72ACE5]",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
         },
         {
-            "image": "/assets/characters/thinker-female.png",
-            "title": "Thinker",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
-        },
-        {
-            "image": "/assets/characters/support-male.png",
+            "image": "/assets/characters/support",
             "title": "Support",
+            "alt": "Support",
+            "color": "text-[#CADBC2]",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
         },
         {
-            "image": "/assets/characters/support-female.png",
-            "title": "Support",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
-        },
-        {
-            "image": "/assets/characters/passionate-male.png",
+            "image": "/assets/characters/passionate",
             "title": "Passionate",
+            "alt": "Passionate",
+            "color": "text-[#F9EF83]",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
         },
         {
-            "image": "/assets/characters/passionate-female.png",
-            "title": "Passionate",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
-        },
-        {
-            "image": "/assets/characters/neutral-male.png",
+            "image": "/assets/characters/neutral",
             "title": "Neutral",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
-        },
-        {
-            "image": "/assets/characters/neutral-female.png",
-            "title": "Neutral",
+            "alt": "Neutral",
+            "color": "text-[#E5BEBE]",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
         },
     ]
@@ -84,20 +70,24 @@ export default function BadgeName() {
                     BEGIN THE JOURNEY
                 </button>
             </div>
-            <Modal isVisible={showModal} setStage={setStage} stage={stage}>
+            <Modal isVisible={showModal} >
                 {
-                    stage === 1 ? <Notif /> :
-                        stage === 2 ? <FormData /> :
-                            stage === 3 ? <CharacterSelection setStage={setStage} /> :
-                                stage === 4 ? <CharacterDetails setStage={setStage} characters={characters[0]} /> :
-                                    stage === 5 ? <CharacterDetails setStage={setStage} characters={characters[1]} /> :
-                                        stage === 6 ? <CharacterDetails setStage={setStage} characters={characters[2]} /> :
-                                            stage === 7 ? <CharacterDetails setStage={setStage} characters={characters[3]} /> :
-                                                stage === 8 ? <Preview setStage={setStage} /> :
-                                                    <button className="bg-black" onClick={() => {
-                                                        setShowModal(false)
-                                                        setStage(1)
-                                                    }}>Tulisan apapun</button>
+                    stage === 1 ? <Notif setStage={setStage} stage={stage} setShowModal={setShowModal}/> :
+                        stage === 2 ? <FormData setStage={setStage} stage={stage} /> :
+                            stage === 3 ? <CharacterSelection setStage={setStage} stage={stage} 
+                            characters={characters}/> :
+                                stage === 4 ? <CharacterDetails setStage={setStage} stage={stage}
+                                    characters={characters[0]} setSelected={setSelected} /> :
+                                    stage === 5 ? <CharacterDetails setStage={setStage} stage={stage}
+                                        characters={characters[1]} setSelected={setSelected} /> :
+                                        stage === 6 ? <CharacterDetails setStage={setStage} stage={stage}
+                                            characters={characters[2]} setSelected={setSelected} /> :
+                                            stage === 7 ? <CharacterDetails setStage={setStage} stage={stage}
+                                                characters={characters[3]} setSelected={setSelected} /> :
+                                                stage === 8 ? <CharacterDetails setStage={setStage} stage={stage}
+                                                    characters={characters[4]} setSelected={setSelected} /> :
+                                                    stage === 9 ? <Preview setStage={setStage} stage={stage}
+                                                        selected={selected} setShowModal={setShowModal} /> : <></>
                 }
             </Modal>
 

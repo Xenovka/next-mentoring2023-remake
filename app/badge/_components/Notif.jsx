@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from 'react'
+import styles from "@/public/styles/about.module.css";
 
-export default function Notif() {
+export default function Notif({ setStage, stage, setShowModal}) {
+
   return (
-    <div className="flex flex-col gap-20 mx-40 justify-center">
+    <div className="flex flex-col gap-10 mx-40 justify-center items-center">
       <h1 className="text-3xl font-extrabold text-center uppercase">
         Notification?
       </h1>
@@ -19,7 +21,23 @@ export default function Notif() {
         eveniet ullam iusto. Alias, nihil consequuntur! Aperiam doloremque
         fugiat aliquam sequi mollitia culpa cumque?
       </p>
-      <button>Back</button>
+      <button
+        className={`${styles.gradienbackmodal} w-60 h-10 text-base font-semibold flex justify-center items-center`}
+        onClick={() => {
+          setStage(2)
+        }}
+      >
+        I'M READY!
+      </button>
+      <button
+        className={`w-60 h-10 text-base font-semibold flex justify-center items-center`}
+        onClick={() => {
+          setShowModal(false)
+          setStage(1)
+        }}
+      >
+        Back
+      </button>
     </div>
   );
 }
