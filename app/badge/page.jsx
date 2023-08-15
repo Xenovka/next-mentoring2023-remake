@@ -12,26 +12,57 @@ export default function BadgeName() {
     const [stage, setStage] = useState(1);
     const characters = [
         {
-            "image": "/assets/characters/thinker.png",
+            "image": "/assets/characters/leader-male.png",
+            "title": "Leader",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
+        },
+        {
+            "image": "/assets/characters/leader-fmale.png",
+            "title": "Leader",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
+        },
+        {
+            "image": "/assets/characters/thinker-male.png",
             "title": "Thinker",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
         },
         {
-            "image": "/assets/characters/support.png",
+            "image": "/assets/characters/thinker-female.png",
+            "title": "Thinker",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
+        },
+        {
+            "image": "/assets/characters/support-male.png",
             "title": "Support",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
         },
         {
-            "image": "/assets/characters/passionate.png",
+            "image": "/assets/characters/support-female.png",
+            "title": "Support",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
+        },
+        {
+            "image": "/assets/characters/passionate-male.png",
             "title": "Passionate",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
         },
         {
-            "image": "/assets/characters/neutral.png",
+            "image": "/assets/characters/passionate-female.png",
+            "title": "Passionate",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
+        },
+        {
+            "image": "/assets/characters/neutral-male.png",
+            "title": "Neutral",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
+        },
+        {
+            "image": "/assets/characters/neutral-female.png",
             "title": "Neutral",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, quis aliquam nisl nunc auctor nisl."
         },
     ]
+
     return (
         <div className="flex min-h-screen flex-col items-center justify-between p-24">
             {/* <motion.div
