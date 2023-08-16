@@ -34,12 +34,17 @@ export default function Preview({ setStage, selected, setShowModal }) {
     }
 
     useEffect(() => {
-        const gender = localStorage.getItem("gender")
+        const nameData = localStorage.getItem("name")
+        const genderData = localStorage.getItem("gender")
+        const nimData = localStorage.getItem("nim")
+        const jurusanData = localStorage.getItem("jurusan")
+        const groupData = localStorage.getItem("group")
+        const mentorData = localStorage.getItem("mentor")
         let selectedImage
-        if (!gender) {
+        if (!genderData) {
             setStage(2)
         } else {
-            selectedImage = `${selected.image}-${gender}.png`
+            selectedImage = `${selected.image}-${genderData}.png`
         }
         const badge = new fabric.Canvas(canvasRef.current, {
             height: 480,
@@ -58,16 +63,16 @@ export default function Preview({ setStage, selected, setShowModal }) {
             badge.add(img);
         });
 
-        let nama = createText(400, 50, "Asep Saepuloh", 42, manrope700)
+        let nama = createText(400, 50, nameData, 42, manrope700)
         badge.add(nama);
 
-        let role = createText(400, 95, "Thinker", 22, manrope700)
+        let role = createText(400, 95, selected.title, 22, manrope700)
         badge.add(role);
 
-        let nim = createText(400, 130, "Kode NIM: 00000012345", 16)
+        let nim = createText(400, 130, "Kode NIM: " + nimData, 16)
         badge.add(nim);
 
-        let jurusan = createText(400, 150, "Jurusan: Teknik Informatika", 16)
+        let jurusan = createText(400, 150, "Jurusan: " + jurusanData, 16)
         badge.add(jurusan);
 
         let desc = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quod tenetur quos sint. Quibusdam, sapiente itaque minus aperiam saepe excepturi minima aut recusandae eos eius natus, magni, ipsum quas rerum. Consequuntur odio harum reprehenderit, officia quae sequi voluptatum, doloremque cupiditate eveniet quis magnam? Consequatur dolorum magni tenetur voluptatum vitae est cumque repellendus obcaecati repellat iure, distinctio maxime deserunt sit tempora, ea, consectetur facilis quaerat sequi illum animi expedita dolore et id quibusdam. Veritatis voluptates porro ut quasi! Assumenda, impedit minus, esse totam eveniet ullam quos"
@@ -87,6 +92,7 @@ export default function Preview({ setStage, selected, setShowModal }) {
 
         badge.renderAll();
         canvasObj.current = badge;
+
         return () => {
             // Dispose the canvas only if it exists
             if (canvasObj.current) {
@@ -98,8 +104,23 @@ export default function Preview({ setStage, selected, setShowModal }) {
     }, []);
 
     const downloadImage = () => {
+        const screenshot = canvasObj.current.toDataURL()
+        const finalCanvas = new fabric.StaticCanvas(null)
+        finalCanvas.setBackgroundImage("", finalCanvas.renderAll.bind(finalCanvas));
+
+        fabric.Image.fromURL(screenshot, (img) => {
+            img.set({
+              left: 0,
+              top: 0,
+              selectable: false,
+              evented: false,
+            });
+            finalCanvas.add(screenshot)
+          });
+          
+      
         // Generate the data URL with the desired quality (multiplier)
-        const dataURL = canvasObj.current.toDataURL({
+        const dataURL = finalCanvas.toDataURL({
             format: 'png',
             multiplier: 2.2// Use 1 to maintain original size
         });
