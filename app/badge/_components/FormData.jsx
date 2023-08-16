@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import styles from "@/public/styles/about.module.css";
 
-export default function FormData({ setStage, stage }) {
+export default function FormData({ setStage, stage, setShowModal }) {
   const [name, setName] = useState("");
   const [gender, setGender] = useState("");
   const [nim, setNim] = useState("");
@@ -38,19 +38,27 @@ export default function FormData({ setStage, stage }) {
   return (
     <>
       <button
-        className={`${styles.gradienbackmodal} w-40 h-10 text-base font-semibold flex justify-center items-center`}
-        type="submit"
+        className={`flex justify-center items-center absolute left-72 top-[90px]`}
         onClick={() => {
           setStage(1);
         }}
       >
-        Back
+        <img src="/assets/back.svg" alt="" />
       </button>
-      <div className="flex flex-col gap-10 mx-40 justify-center items-center">
+      <button
+        className={`w-10 flex justify-center items-center absolute right-72 top-[90px]`}
+        onClick={() => {
+          setShowModal(false);
+        }}
+      >
+        <img src="/assets/close.svg" alt="" />
+      </button>
+
+      <div className="flex flex-col gap-16 mx-40 justify-center items-center">
         <h1 className="text-3xl font-extrabold text-center uppercase">
           Welcome! Please Insert Your Data!
         </h1>
-        <div className="flex flex-col gap-5">
+        <div className="w-full flex flex-col gap-5">
           <div className="flex justify-between">
             <p className="text-lg font-semibold">Nama</p>
             <div className="flex gap-10">
@@ -58,7 +66,7 @@ export default function FormData({ setStage, stage }) {
               <input
                 type="text"
                 placeholder="Alexandria Dinda"
-                className=" w-80 px-2 bg-[#0F1633]"
+                className="w-96 px-2 bg-[#0F1633]"
                 value={name}
                 name={"name"}
                 onChange={(e) => setName(e.target.value)}
@@ -68,7 +76,7 @@ export default function FormData({ setStage, stage }) {
           </div>
           <div className="flex justify-between">
             <p className="text-lg font-semibold">Jenis Kelamin</p>
-            <div className="flex gap-12 mr-[54px]">
+            <div className="flex gap-12 mr-[119px]">
               <p>:</p>
               <input
                 type="radio"
@@ -97,7 +105,7 @@ export default function FormData({ setStage, stage }) {
               <input
                 type="text"
                 placeholder="00000072345"
-                className=" w-80 px-2 bg-[#0F1633]"
+                className="w-96 px-2 bg-[#0F1633]"
                 onChange={(e) => setNim(e.target.value)}
                 value={nim}
                 name={"nim"}
@@ -112,7 +120,7 @@ export default function FormData({ setStage, stage }) {
               <input
                 type="text"
                 placeholder="Desain Komunikasi Visual"
-                className=" w-80 px-2 bg-[#0F1633]"
+                className="w-96 px-2 bg-[#0F1633]"
                 onChange={(e) => setJurusan(e.target.value)}
                 value={jurusan}
                 name={"jurusan"}
@@ -128,7 +136,7 @@ export default function FormData({ setStage, stage }) {
                 type="number"
                 min="1"
                 placeholder="75"
-                className=" w-80 px-2 bg-[#0F1633]"
+                className="w-96 px-2 bg-[#0F1633]"
                 onChange={(e) => setGroup(e.target.value)}
                 value={group}
                 name={"group"}
@@ -143,7 +151,7 @@ export default function FormData({ setStage, stage }) {
               <input
                 type="text"
                 placeholder="Syaiful Anam"
-                className=" w-80 px-2 bg-[#0F1633]"
+                className="w-96 px-2 bg-[#0F1633]"
                 onChange={(e) => setMentor(e.target.value)}
                 value={mentor}
                 name={"mentor"}
@@ -155,18 +163,9 @@ export default function FormData({ setStage, stage }) {
         <p className="text-center opacity-50 italic">
           Diharapkan kepada mentee untuk mengisi data diri dengan benar!
         </p>
-        <div className="flex justify-evenly w-full">
+        <div>
           <button
-            className={`${styles.gradienbackmodal} w-40 h-10 text-base font-semibold flex justify-center items-center`}
-            type="submit"
-            onClick={() => {
-              setStage(1);
-            }}
-          >
-            Back
-          </button>
-          <button
-            className={`${styles.gradienbackmodal} w-40 h-10 text-base font-semibold flex justify-center items-center`}
+            className={`${styles.gradienbackmodal} w-60 h-10 text-base font-semibold flex justify-center items-center`}
             type="submit"
             onClick={handleDataSubmit}
           >

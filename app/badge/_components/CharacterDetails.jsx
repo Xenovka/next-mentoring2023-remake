@@ -6,6 +6,7 @@ export default function CharacterDetails({
   setStage,
   setSelected,
   characters,
+  setShowModal,
 }) {
   const [image, setImage] = useState(`${characters.image}-male.png`);
 
@@ -21,14 +22,22 @@ export default function CharacterDetails({
   return (
     <>
       <button
-        className={`w-60 h-20 text-3xl font-semibold flex justify-center items-center absolute right-[15vw] top-[15vh]`}
+        className={`flex justify-center items-center absolute left-72 top-[90px]`}
         onClick={() => {
-          setShowModal(false);
-          setStage(1);
+          setStage(3);
         }}
       >
-        Back
+        <img src="/assets/back.svg" alt="" />
       </button>
+      <button
+        className={`w-10 flex justify-center items-center absolute right-72 top-[90px]`}
+        onClick={() => {
+          setShowModal(false);
+        }}
+      >
+        <img src="/assets/close.svg" alt="" />
+      </button>
+
       <div className="flex flex-col gap-20 mx-40 justify-center items-center">
         <h1 className="text-3xl font-extrabold text-center uppercase">
           Select your character
@@ -90,14 +99,6 @@ export default function CharacterDetails({
           }}
         >
           Continue
-        </button>
-        <button
-          className={`${styles.gradienbackmodal} w-60 h-10 text-base font-semibold flex justify-center items-center`}
-          onClick={() => {
-            setStage(3);
-          }}
-        >
-          back
         </button>
       </div>
     </>
