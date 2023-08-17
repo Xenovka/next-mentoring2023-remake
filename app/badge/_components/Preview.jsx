@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { fabric } from "fabric";
-import { Manrope } from "next/font/google";
+import { Karla } from "next/font/google";
 import styles from "@/public/styles/about.module.css";
 
 function titleCase(str) {
@@ -11,13 +11,13 @@ function titleCase(str) {
   return splitStr.join(' ');
 }
 
-const manrope700 = Manrope({
+const karla700 = Karla({
   weight: "700",
   subsets: ["latin"],
   display: "swap",
 });
 
-const manrope400 = Manrope({
+const karla400 = Karla({
   weight: "400",
   subsets: ["latin"],
   display: "swap",
@@ -27,12 +27,12 @@ export default function Preview({ setStage, selected, setShowModal }) {
   const canvasRef = useRef(null);
   const canvasObj = useRef(null);
   // const [image, setImage] = useState(selected.image + "-male.png");
-  function createText(left, top, text, fontSize = 20, font = manrope400, isPreview = true) {
+  function createText(left, top, text, fontSize = 20, font = karla400, isPreview = true) {
     return new fabric.Text(text, {
       left: left,
       top: top,
       fontSize: fontSize,
-      fill: isPreview ? "white" : "black",
+      fill: isPreview ? "white" : "#4B4F8E",
       fontFamily: font.style.fontFamily,
       weight: font.style.fontWeight,
       selectable: false,
@@ -46,8 +46,6 @@ export default function Preview({ setStage, selected, setShowModal }) {
     const genderData = localStorage.getItem("gender");
     const nimData = localStorage.getItem("nim");
     const jurusanData = localStorage.getItem("jurusan");
-    const groupData = localStorage.getItem("group");
-    const mentorData = localStorage.getItem("mentor");
     let selectedImage;
     if (!genderData) {
       setStage(2);
@@ -71,10 +69,10 @@ export default function Preview({ setStage, selected, setShowModal }) {
       badge.add(img);
     });
 
-    let nama = createText(400, 50, nameData, 42, manrope700);
+    let nama = createText(400, 50, nameData, 42, karla700);
     badge.add(nama);
 
-    let role = createText(400, 95, selected.title, 22, manrope700);
+    let role = createText(400, 95, selected.title, 22, karla700);
     badge.add(role);
 
     let nim = createText(400, 130, nimData, 16);
@@ -90,8 +88,8 @@ export default function Preview({ setStage, selected, setShowModal }) {
       top: 180,
       fontSize: 14,
       fill: "white",
-      fontFamily: manrope400.style.fontFamily,
-      weight: manrope400.style.fontWeight,
+      fontFamily: karla400.style.fontFamily,
+      weight: karla400.style.fontWeight,
       selectable: false,
       hoverCursor: "default",
       moveCursor: "default",
@@ -152,22 +150,22 @@ export default function Preview({ setStage, selected, setShowModal }) {
         });
         finalCanvas.add(img);
 
-        let nama = createText(400, 121, titleCase(nameData), 42, manrope700, false)
+        let nama = createText(400, 121, titleCase(nameData), 42, karla700, false)
         finalCanvas.add(nama);
 
-        let nim = createText(550, 185, nimData, 16, manrope400, false);
+        let nim = createText(550, 186, nimData, 16, karla400, false);
         finalCanvas.add(nim);
 
-        let jurusan = createText(550, 210, titleCase(jurusanData), 16, manrope400, false);
+        let jurusan = createText(550, 210, titleCase(jurusanData), 16, karla400, false);
         finalCanvas.add(jurusan);
 
-        let group = createText(550, 232, groupData, 16, manrope400, false);
+        let group = createText(550, 233, groupData, 16, karla400, false);
         finalCanvas.add(group);
 
-        let mentor = createText(550, 255, titleCase(mentorData), 16, manrope400, false);
+        let mentor = createText(550, 255, titleCase(mentorData), 16, karla400, false);
         finalCanvas.add(mentor);
 
-        let role = createText(550, 279, selected.title, 16, manrope400, false);
+        let role = createText(550, 279, selected.title, 16, karla400, false);
         finalCanvas.add(role);
 
         finalCanvas.renderAll();
