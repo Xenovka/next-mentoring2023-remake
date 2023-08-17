@@ -81,8 +81,7 @@ export default function Preview({ setStage, selected, setShowModal }) {
     let jurusan = createText(400, 150, jurusanData, 16);
     badge.add(jurusan);
 
-    let desc =
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quod tenetur quos sint. Quibusdam, sapiente itaque minus aperiam saepe excepturi minima aut recusandae eos eius natus, magni, ipsum quas rerum. Consequuntur odio harum reprehenderit, officia quae sequi voluptatum, doloremque cupiditate eveniet quis magnam? Consequatur dolorum magni tenetur voluptatum vitae est cumque repellendus obcaecati repellat iure, distinctio maxime deserunt sit tempora, ea, consectetur facilis quaerat sequi illum animi expedita dolore et id quibusdam. Veritatis voluptates porro ut quasi! Assumenda, impedit minus, esse totam eveniet ullam quos";
+    let desc = selected.description;
     let description = new fabric.Textbox(desc, {
       left: 400,
       top: 180,

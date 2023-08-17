@@ -9,6 +9,7 @@ export default function FormData({ setStage, stage, setShowModal }) {
   const [jurusan, setJurusan] = useState("");
   const [group, setGroup] = useState("");
   const [mentor, setMentor] = useState("");
+  const blockInvalidChar = e => ['e', 'E', '+', '-', '.'].includes(e.key) && e.preventDefault();
 
   useEffect(() => {
     const name = localStorage.getItem("name");
@@ -103,7 +104,8 @@ export default function FormData({ setStage, stage, setShowModal }) {
             <div className="flex gap-10">
               <p>:</p>
               <input
-                type="text"
+                type="number"
+                onKeyDown={blockInvalidChar}
                 placeholder="00000072345"
                 className="w-96 px-2 bg-[#0F1633]"
                 onChange={(e) => setNim(e.target.value)}
@@ -140,6 +142,7 @@ export default function FormData({ setStage, stage, setShowModal }) {
                 onChange={(e) => setGroup(e.target.value)}
                 value={group}
                 name={"group"}
+                onKeyDown={blockInvalidChar}
                 required
               />
             </div>
