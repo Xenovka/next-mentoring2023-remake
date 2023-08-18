@@ -28,7 +28,7 @@
 }
 
 .gradienbackmodal {
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   border-top: none;
   border-image-repeat: round;
   border-image-slice: 1;
@@ -39,7 +39,7 @@
 }
 
 .modal {
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   border-top: none;
   border-image-repeat: round;
   border-image-slice: 1;
