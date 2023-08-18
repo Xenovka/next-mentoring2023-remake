@@ -2,14 +2,19 @@ import React, { useRef, useEffect } from "react";
 import { fabric } from "fabric";
 import { Karla } from "next/font/google";
 import styles from "@/public/styles/about.module.css";
+import localFont from 'next/font/local';
 
 function titleCase(str) {
-  var splitStr = str.toLowerCase().split(' ');
+  var splitStr = str.toLowerCase().split(" ");
   for (var i = 0; i < splitStr.length; i++) {
     splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
   }
   return splitStr.join(' ');
 }
+
+const joyStix = localFont({
+  src: "./fonts/joystix monospace.ttf"
+})
 
 const karla700 = Karla({
   weight: "700",
@@ -26,7 +31,7 @@ const karla400 = Karla({
 export default function Preview({ setStage, selected, setShowModal }) {
   const canvasRef = useRef(null);
   const canvasObj = useRef(null);
-  // const [image, setImage] = useState(selected.image + "-male.png");
+
   function createText(left, top, text, fontSize = 20, font = karla400, isPreview = true) {
     return new fabric.Text(text, {
       left: left,
@@ -121,7 +126,6 @@ export default function Preview({ setStage, selected, setShowModal }) {
     } else {
       selectedImage = `${selected.image}-${genderData}.png`;
     }
-
     const finalCanvas = new fabric.Canvas(null, {
       width: 830,
       height: 1173,
@@ -149,7 +153,7 @@ export default function Preview({ setStage, selected, setShowModal }) {
         });
         finalCanvas.add(img);
 
-        let nama = createText(400, 121, titleCase(nameData), 42, karla700, false)
+        let nama = createText(395, 121, nameData.toUpperCase(), 38, joyStix, false)
         finalCanvas.add(nama);
 
         let nim = createText(550, 186, nimData, 16, karla400, false);
