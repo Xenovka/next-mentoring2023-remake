@@ -36,10 +36,17 @@ export default function Home() {
         animate={{ y: [-10, 30, -10], rotate: [0, 360] }}
         transition={{
           y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
-          rotate: { duration: 1, repeatDelay: 2, repeat: Infinity, ease: "easeInOut" }
+          rotate: {
+            duration: 1,
+            repeatDelay: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+          },
         }}
       >
-        <Image src="/assets/zachery/zach-circle.png" alt="Floating Zach" width={400} height={400} />
+        <div className="w-[65dvw] h-[65dvw] md:w-[35dvw] md:h-[35dvw] relative block mx-auto pt-8 md:pt-12">
+          <Image src="/assets/zachery/zach-circle.png" alt="" fill />
+        </div>
       </motion.div>
       <div>
         <Link

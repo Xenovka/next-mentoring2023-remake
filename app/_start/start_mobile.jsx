@@ -63,10 +63,7 @@ export default function StartMobile() {
           </div>
         </div>
 
-        <Link
-          href={"/faq"}
-          className="py-9 relative xl:w-72 w-60 xl:ml-14 ml-6 flex hover:translate-y-[-5px] transition-transform duration-300"
-        >
+        <Link href={"/faq"}>
           <div className="relative w-24">
             <Image
               src="/assets/buttons/btn-faq-mobile.svg"
