@@ -57,7 +57,10 @@ export default function ContactUs() {
             className={` ${styles.bg} ${styles.bgbawah} p-4 md:w-full h-[40vh] md:h-[50vh] text-center text-[2.5vw] md:text-[1.5vw] lg:text-[1.5vw] cursor-pointer hover:-translate-y-1.5 hover:relative hover:z-10 transition-all`}
             onClick={() => setShowModal(true)}
           >
-            <p className="font-bold text-[2.5vh]">Media Partner</p>
+            <p className="font-bold text-base mt-10">Media Partner</p>
+            <div className="w-[30dvw] h-[25dvh] md:w-[15dvw] md:h-[30dvh] relative block mx-auto pt-8 md:pt-12">
+              <Image src="/assets/medpar.svg" alt="" fill />
+            </div>
           </div>
         </div>
 
