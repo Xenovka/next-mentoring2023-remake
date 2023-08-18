@@ -20,7 +20,7 @@ export default function Desktop() {
   return (
     <div className="w-full h-full md:overflow-x-hidden hidescroll ">
       <Image
-        src="/assets/logo.png"
+        src="/assets/mentoring-logo.svg"
         className="absolute top-24 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
         alt="Logo"
         quality={100}

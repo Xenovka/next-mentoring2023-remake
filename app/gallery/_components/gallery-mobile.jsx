@@ -8,7 +8,7 @@ export default function Mobile() {
       <div className="flex justify-center mx-auto gap-8">
         <div className="my-auto w-24 relative">
           <Image
-            src="/assets/home/pagetitle-mobile.svg"
+            src="/assets/pagetitle-mobile.svg"
             className="absolute -z-10 top-2 left-1/2 -translate-x-1/2 -translate-y-1/2 "
             alt="Image"
             width={300}
@@ -19,17 +19,17 @@ export default function Mobile() {
           </h1>
         </div>
         <div className="my-auto w-28">
-          <Image src="/assets/logo.png" className="mx-auto my-auto" alt="Image" width={70} height={70} />
+          <Image src="/assets/mentoring-logo.svg" className="mx-auto my-auto" alt="Image" width={70} height={70} />
         </div>
         <div className="my-auto w-28">
-          <Image src="/assets/home/icon-gear.png" className="mx-auto my-auto" alt="Image" width={45} height={45} />
+          <Image src="/assets/icon-gear.png" className="mx-auto my-auto" alt="Image" width={45} height={45} />
         </div>
       </div>
 
       <div className="flex flex-col justify-center mt-5 text-white max-w-md mx-auto">
-        <EventList isMobile={true} img="squareholder.png" title="Pembekalan 1" id="1" key={1} />
-        <EventList isMobile={true} img="squareholder.png" title="Pembekalan 1" id="1" key={1} />
-        <EventList isMobile={true} img="squareholder.png" title="Pembekalan 1" id="1" key={1} />
+        <EventList isMobile={true} img="/assets/squareholder.png" title="Pembekalan 1" id="1" key={1} />
+        <EventList isMobile={true} img="/assets/squareholder.png" title="Pembekalan 1" id="1" key={1} />
+        <EventList isMobile={true} img="/assets/squareholder.png" title="Pembekalan 1" id="1" key={1} />
       </div>
 
       <Footer />
