@@ -64,7 +64,7 @@ export default function ContactUs() {
         <ContactModal isVisible={showModal} onClose={() => setShowModal(false)}>
           <div className="flex flex-col gap-10">
             <p className="text-[3.5vw] font-bold md:text-[1.5vw] lg:text-[1.5vw] text-center pb-4">
-              SPONSOR
+              Media Partner
             </p>
             <div className="gap-4 md:gap-10 grid grid-cols-2 md:grid-cols-3">
               <div className="w-20 h-20 relative mx-auto">
