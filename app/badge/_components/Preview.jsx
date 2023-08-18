@@ -2,19 +2,20 @@ import React, { useRef, useEffect } from "react";
 import { fabric } from "fabric";
 import { Karla } from "next/font/google";
 import styles from "@/public/styles/about.module.css";
-import localFont from 'next/font/local';
+import localFont from "next/font/local";
 
 function titleCase(str) {
   var splitStr = str.toLowerCase().split(" ");
   for (var i = 0; i < splitStr.length; i++) {
-    splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+    splitStr[i] =
+      splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
   }
-  return splitStr.join(' ');
+  return splitStr.join(" ");
 }
 
 const joyStix = localFont({
-  src: "./fonts/joystix monospace.ttf"
-})
+  src: "./fonts/joystix monospace.ttf",
+});
 
 const karla700 = Karla({
   weight: "700",
@@ -32,7 +33,14 @@ export default function Preview({ setStage, selected, setShowModal }) {
   const canvasRef = useRef(null);
   const canvasObj = useRef(null);
 
-  function createText(left, top, text, fontSize = 20, font = karla400, isPreview = true) {
+  function createText(
+    left,
+    top,
+    text,
+    fontSize = 20,
+    font = karla400,
+    isPreview = true
+  ) {
     return new fabric.Text(text, {
       left: left,
       top: top,
@@ -58,15 +66,15 @@ export default function Preview({ setStage, selected, setShowModal }) {
       selectedImage = `${selected.image}-${genderData}.png`;
     }
     const badge = new fabric.Canvas(canvasRef.current, {
-      height: 480,
-      width: 854,
+      height: 400,
+      width: 750,
       selection: false,
     });
     fabric.Image.fromURL(selectedImage, (img) => {
-      img.scaleToWidth(360);
+      img.scaleToWidth(190);
       img.set({
-        left: 0,
-        top: 0,
+        left: 50,
+        top: 20,
         selectable: false,
         hoverCursor: "default",
         moveCursor: "default",
@@ -74,30 +82,30 @@ export default function Preview({ setStage, selected, setShowModal }) {
       badge.add(img);
     });
 
-    let nama = createText(400, 50, nameData, 42, karla700);
+    let nama = createText(300, 20, nameData, 40, karla700);
     badge.add(nama);
 
-    let role = createText(400, 95, selected.title, 22, karla700);
+    let role = createText(300, 60, selected.title, 22, karla700);
     badge.add(role);
 
-    let nim = createText(400, 130, nimData, 16);
+    let nim = createText(300, 90, nimData, 16);
     badge.add(nim);
 
-    let jurusan = createText(400, 150, jurusanData, 16);
+    let jurusan = createText(300, 110, jurusanData, 16);
     badge.add(jurusan);
 
     let desc = selected.description;
     let description = new fabric.Textbox(desc, {
-      left: 400,
-      top: 180,
-      fontSize: 14,
+      left: 300,
+      top: 150,
+      width: 400,
+      fontSize: 16,
       fill: "white",
       fontFamily: karla400.style.fontFamily,
       weight: karla400.style.fontWeight,
       selectable: false,
       hoverCursor: "default",
       moveCursor: "default",
-      width: 400,
     });
     badge.add(description);
 
@@ -153,19 +161,40 @@ export default function Preview({ setStage, selected, setShowModal }) {
         });
         finalCanvas.add(img);
 
-        let nama = createText(395, 121, nameData.toUpperCase(), 38, joyStix, false)
+        let nama = createText(
+          395,
+          121,
+          nameData.toUpperCase(),
+          38,
+          joyStix,
+          false
+        );
         finalCanvas.add(nama);
 
         let nim = createText(550, 186, nimData, 16, karla400, false);
         finalCanvas.add(nim);
 
-        let jurusan = createText(550, 210, titleCase(jurusanData), 16, karla400, false);
+        let jurusan = createText(
+          550,
+          210,
+          titleCase(jurusanData),
+          16,
+          karla400,
+          false
+        );
         finalCanvas.add(jurusan);
 
         let group = createText(550, 233, groupData, 16, karla400, false);
         finalCanvas.add(group);
 
-        let mentor = createText(550, 255, titleCase(mentorData), 16, karla400, false);
+        let mentor = createText(
+          550,
+          255,
+          titleCase(mentorData),
+          16,
+          karla400,
+          false
+        );
         finalCanvas.add(mentor);
 
         let role = createText(550, 279, selected.title, 16, karla400, false);
@@ -182,18 +211,16 @@ export default function Preview({ setStage, selected, setShowModal }) {
         link.download = "Badge";
         link.click();
       });
-
-
     });
   };
 
   const downloadMap = async () => {
-    const dataURL = "/assets/badge/map.png"
+    const dataURL = "/assets/badge/map.png";
     const link = document.createElement("a");
     link.href = dataURL;
     link.download = "Map";
     link.click();
-  }
+  };
 
   return (
     <>
@@ -215,13 +242,12 @@ export default function Preview({ setStage, selected, setShowModal }) {
       </button>
 
       <div className="flex flex-col mx-40 justify-center items-center">
-        Print Your Badge
         <div className="flex flex-col items-center gap-10">
           <canvas
             ref={canvasRef}
             id="canvas"
             width="400"
-            height="300"
+            height="200"
             className="border-2 border-yellow-200"
           />
 
