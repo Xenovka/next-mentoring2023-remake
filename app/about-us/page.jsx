@@ -38,9 +38,9 @@ export default function AboutUs() {
             className={`${styles.templategrid} mx-auto w-[80dvw] md:w-screen flex justify-center gap-[2vw] mt-[5vh] lg:mt-[2vh]`}
           >
             {/* bagian character */}
-            <div
+            <Link
+              href="/divisi"
               className={`${styles.gradien} ${styles.character} flex flex-col justify-between px-[1vw] py-[1vh] md:py-[2vh] lg:py-[2vh] min-h-[25dvh] md:min-h-[55vh] lg:min-h-[38dvh] min-w-[40dvw] lg:min-w-[20dvw]`}
-              onClick={() => setShowModal(true)}
             >
               <div className="w-[15dvw] h-[15dvw] md:w-[20dvw] md:h-[20dvw] lg:w-[5dvw] lg:h-[5dvw] relative block">
                 <Image
@@ -57,8 +57,7 @@ export default function AboutUs() {
                   Character
                 </span>
               </div>
-            </div>
-
+            </Link>
             {/* bagian sdg */}
             <div
               className={`${styles.gradien} ${styles.sdg} flex flex-row-reverse lg:flex-col justify-between items-center lg:items-start px-[1vw] py-[1vh] w-full min-h-[10vh] md:min-h-[20vh]`}
