@@ -39,7 +39,7 @@ export default function Home() {
           rotate: { duration: 1, repeatDelay: 2, repeat: Infinity, ease: "easeInOut" }
         }}
       >
-        <Image src="/assets/zachery/hero-zach.png" alt="Floating Zach" width={400} height={400} />
+        <Image src="/assets/zachery/zach-circle.png" alt="Floating Zach" width={400} height={400} />
       </motion.div>
       <div>
         <Link
