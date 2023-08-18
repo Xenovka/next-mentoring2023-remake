@@ -32,17 +32,22 @@ export default function Start() {
                     duration: 3,
                     repeat: Infinity,
                     repeatType: "reverse",
-                    ease: "easeInOut"
+                    ease: "easeInOut",
                   },
                   scale: {
                     duration: 1,
-                    ease: "easeInOut"
-                  }
-                }
+                    ease: "easeInOut",
+                  },
+                },
               }}
               style={{ width: "100%", height: "100%", margin: "auto" }}
             >
-              <Image src="/assets/zachery/zach-circle.png" alt="Zach" quality={100} fill />
+              <Image
+                src="/assets/zachery/zach-circle.png"
+                alt="Zach"
+                quality={100}
+                fill
+              />
             </motion.div>
           </div>
           <div className="xl:w-1/3 lg:w-1/2 flex flex-col mt-4 ">
@@ -57,7 +62,9 @@ export default function Start() {
                 width={400}
                 height={330}
               />
-              <h1 className="text-white absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-3xl">FAQ</h1>
+              <h1 className="text-white absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-3xl">
+                FAQ
+              </h1>
             </Link>
 
             {/*Gallery Card */}
@@ -71,7 +78,13 @@ export default function Start() {
               />
               <div className="bg-gradient-to-t to-transparent rounded-lg p-0.5 relative mx-auto w-80">
                 <div className="p-1 bg-gradient-to-t from-yellowOutline to-transparent rounded-lg mb-8 ">
-                  <Image src="/assets/mantap.png" className="w-full rounded-lg" alt="Image" width={200} height={200} />
+                  <Image
+                    src="/assets/mantap.png"
+                    className="w-full rounded-lg"
+                    alt="Image"
+                    width={200}
+                    height={200}
+                  />
                 </div>
                 <Link
                   href="/gallery"
@@ -136,11 +149,19 @@ export default function Start() {
                 width={200}
                 height={200}
               />
-              <h1 className="text-white text-center text-3xl mb-4">Notification</h1>
+              <h1 className="text-white text-center text-3xl mb-4">
+                Notification
+              </h1>
               <div className=" p-2 mb-8 flex flex-col justify-center">
                 <div className="">
                   <div className="relative">
-                    <Image src="/assets/news-box.svg" className="mx-auto " alt="Image" width={300} height={300} />
+                    <Image
+                      src="/assets/news-box.svg"
+                      className="mx-auto "
+                      alt="Image"
+                      width={300}
+                      height={300}
+                    />
                     <Image
                       src="/assets/zachery/zach-back.png"
                       className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -173,7 +194,7 @@ export default function Start() {
             </div>
 
             <Link
-              href="/"
+              href="/badge"
               className="py-9 relative flex w-80 mx-auto mt-28 hover:translate-y-[-5px] transition-transform duration-300"
             >
               <Image
@@ -184,7 +205,7 @@ export default function Start() {
                 height={530}
               />
               <h1 className="text-white absolute top-7 left-1/2 -translate-y-1/2 -translate-x-1/2 text-2xl whitespace-nowrap">
-                Coming Soon
+                Character Selection
               </h1>
             </Link>
           </div>
