@@ -76,13 +76,13 @@ export default function ContactUs() {
                   className="absolute overflow-visible"
                 />
               </div>
-              <div className="w-20 h-20 relative mx-auto">
+              <div className="w-20 h-20 relative mx-auto ">
                 <Image
                   alt=""
                   src="/assets/medpar/umn-tv.jpg"
                   fill
                   objectFit="cover"
-                  className="absolute overflow-visible"
+                  className="absolute overflow-visible scale-125"
                 />
               </div>
               <div className="w-20 h-20 relative mx-auto">
@@ -91,7 +91,7 @@ export default function ContactUs() {
                   src="/assets/medpar/umn-radio.png"
                   fill
                   objectFit="cover"
-                  className="absolute overflow-visible"
+                  className="absolute overflow-visible scale-125 bg-white"
                 />
               </div>
               <div className="w-20 h-20 relative mx-auto">
@@ -127,7 +127,7 @@ export default function ContactUs() {
                   src="/assets/medpar/hmdkv.png"
                   fill
                   objectFit="cover"
-                  className="absolute overflow-visible"
+                  className="absolute overflow-visible scale-95"
                 />
               </div>
               <div className="w-20 h-20 relative mx-auto">
@@ -136,7 +136,7 @@ export default function ContactUs() {
                   src="/assets/medpar/hmfilm.png"
                   fill
                   objectFit="cover"
-                  className="absolute overflow-visible"
+                  className="absolute overflow-visible scale-125"
                 />
               </div>
               <div className="w-20 h-20 relative mx-auto">
@@ -145,7 +145,7 @@ export default function ContactUs() {
                   src="/assets/medpar/imkom.png"
                   fill
                   objectFit="cover"
-                  className="absolute overflow-visible"
+                  className="absolute overflow-visible scale-125"
                 />
               </div>
             </div>
