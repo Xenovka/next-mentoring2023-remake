@@ -9,7 +9,8 @@ export default function FormData({ setStage, stage, setShowModal }) {
   const [jurusan, setJurusan] = useState("");
   const [group, setGroup] = useState("");
   const [mentor, setMentor] = useState("");
-  const blockInvalidChar = e => ['e', 'E', '+', '-', '.'].includes(e.key) && e.preventDefault();
+  const blockInvalidChar = (e) =>
+    ["e", "E", "+", "-", "."].includes(e.key) && e.preventDefault();
 
   useEffect(() => {
     const name = localStorage.getItem("name");
@@ -72,6 +73,7 @@ export default function FormData({ setStage, stage, setShowModal }) {
                 name={"name"}
                 onChange={(e) => setName(e.target.value)}
                 required
+                maxlength="10"
               />
             </div>
           </div>

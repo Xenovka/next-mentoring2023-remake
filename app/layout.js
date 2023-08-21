@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${karla.className} hidescroll`}>{children}</body>
+      <body className={`${karla.className} hidescroll text-white`}>{children}</body>
     </html>
   );
 }

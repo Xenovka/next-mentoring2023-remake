@@ -3,6 +3,7 @@ import { fabric } from "fabric";
 import { Karla } from "next/font/google";
 import styles from "@/public/styles/about.module.css";
 import localFont from "next/font/local";
+import Link from "next/link";
 
 function titleCase(str) {
   var splitStr = str.toLowerCase().split(" ");
@@ -63,7 +64,7 @@ export default function Preview({ setStage, selected, setShowModal }) {
     if (!genderData) {
       setStage(2);
     } else {
-      selectedImage = `${selected.image}-${genderData}.png`;
+      selectedImage = `${selected.image}-${genderData}-2.png`;
     }
     const badge = new fabric.Canvas(canvasRef.current, {
       height: 400,
@@ -71,9 +72,12 @@ export default function Preview({ setStage, selected, setShowModal }) {
       selection: false,
     });
     fabric.Image.fromURL(selectedImage, (img) => {
-      img.scaleToWidth(190);
+      img.scaleToWidth(
+        selected.title === "Passionate" && genderData === "male" ? 300 : 190
+      );
       img.set({
-        left: 50,
+        left:
+          selected.title === "Passionate" && genderData === "male" ? 10 : 50,
         top: 20,
         selectable: false,
         hoverCursor: "default",
@@ -132,7 +136,7 @@ export default function Preview({ setStage, selected, setShowModal }) {
     if (!genderData) {
       setStage(2);
     } else {
-      selectedImage = `${selected.image}-${genderData}.png`;
+      selectedImage = `${selected.image}-${genderData}-2.png`;
     }
     const finalCanvas = new fabric.Canvas(null, {
       width: 830,
@@ -151,9 +155,14 @@ export default function Preview({ setStage, selected, setShowModal }) {
       finalCanvas.add(img);
 
       fabric.Image.fromURL(selectedImage, (img) => {
-        img.scaleToWidth(220);
+        img.scaleToWidth(
+          selected.title === "Passionate" && genderData === "male" ? 260 : 220
+        );
         img.set({
-          left: 160,
+          left:
+            selected.title === "Passionate" && genderData === "male"
+              ? 140
+              : 160,
           top: 90,
           selectable: false,
           hoverCursor: "default",
@@ -264,15 +273,13 @@ export default function Preview({ setStage, selected, setShowModal }) {
             >
               Download Map
             </button>
-            <button
-              className={`${styles.gradienbackmodal} w-60 h-10 text-base font-semibold flex justify-center items-center`}
-              onClick={() => {
-                setShowModal(false);
-                setStage(1);
-              }}
-            >
-              Continue
-            </button>
+            <Link href="/">
+              <button
+                className={`${styles.gradienbackmodal} w-60 h-10 text-base font-semibold flex justify-center items-center`}
+              >
+                Continue
+              </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -26,10 +26,10 @@ export default function ContactUs() {
       </div>
 
       <div className="flex flex-col items-center ">
-        <div className="gap-4 w-[90dvw] my-8 text-white grid grid-cols-2 md:grid-cols-3">
+        <div className="gap-4 w-[90dvw] my-8 text-white md:grid md:grid-cols-3 flex justify-center items-center flex-col">
           <a
             href="mailto:mentoring@umn.ac.id"
-            className={` ${styles.bg} p-4 md:w-full h-[40vh] md:h-[50vh] flex flex-row items-center justify-center text-center text-[2.5vw] md:text-[1.5vw] lg:text-[1.5vw] hover:-translate-y-1.5 hover:relative hover:z-10 transition-all`}
+            className={` ${styles.bg} p-4 md:w-full w-[80vw] h-[40vh] md:h-[50vh] flex flex-row items-center justify-center text-center text-[2.5vw] md:text-[1.5vw] lg:text-[1.5vw] hover:-translate-y-1.5 hover:relative hover:z-10 transition-all`}
           >
             <div>
               <p className="font-bold text-base">Email</p>
@@ -42,7 +42,7 @@ export default function ContactUs() {
           <Link
             href="https://instagram.com/mentoringumn"
             target="blank"
-            className={`${styles.bg} p-4 md:w-full h-[40vh] md:h-[50vh] flex flex-row items-center justify-center text-center text-[2.5vw] md:text-[1.5vw] lg:text-[1.5vw] hover:-translate-y-1.5 hover:relative hover:z-10 transition-all`}
+            className={`${styles.bg} p-4 md:w-full w-[80vw] h-[40vh] md:h-[50vh] flex flex-row items-center justify-center text-center text-[2.5vw] md:text-[1.5vw] lg:text-[1.5vw] hover:-translate-y-1.5 hover:relative hover:z-10 transition-all`}
           >
             <div>
               <p className="font-bold text-base">Instagram</p>
@@ -54,7 +54,7 @@ export default function ContactUs() {
           </Link>
 
           <div
-            className={` ${styles.bg} ${styles.bgbawah} p-4 md:w-full h-[40vh] md:h-[50vh] text-center text-[2.5vw] md:text-[1.5vw] lg:text-[1.5vw] cursor-pointer hover:-translate-y-1.5 hover:relative hover:z-10 transition-all`}
+            className={` ${styles.bg} ${styles.bgbawah} p-4 md:w-full w-[80vw] h-[40vh] md:h-[50vh] text-center text-[2.5vw] md:text-[1.5vw] lg:text-[1.5vw] cursor-pointer hover:-translate-y-1.5 hover:relative hover:z-10 transition-all`}
             onClick={() => setShowModal(true)}
           >
             <p className="font-bold text-base mt-10">Media Partner</p>
