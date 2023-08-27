@@ -19,7 +19,7 @@ export default function ContactUs() {
         <Image src="/assets/mentoring-logo.svg" alt="Logo" fill />
       </div>
       <div className="flex flex-col w-[40dvw] md:w-[20dvw] lg:w-[13dvw] md:ml-[12vw] ml-[10vw]">
-        <span className="text-white font-semibold italic relative z-[5] mb-[-3dvw] md:mb-[-2.5dvw] lg:mb-[-1.4dvw] mx-3 text-sm md:text-lg lg:text-2xl">
+        <span className="text-white font-semibold italic relative z-[5] mb-[-4dvw] md:mb-[-2.5dvw] lg:mb-[-1.4dvw] mx-3 text-base md:text-lg lg:text-2xl">
           Contact Us
         </span>
         <div className={`${styles.title} w-full`}></div>
@@ -54,11 +54,11 @@ export default function ContactUs() {
           </Link>
 
           <div
-            className={` ${styles.bg} ${styles.bgbawah} p-4 md:w-full w-[80vw] h-[40vh] md:h-[50vh] text-center text-[2.5vw] md:text-[1.5vw] lg:text-[1.5vw] cursor-pointer hover:-translate-y-1.5 hover:relative hover:z-10 transition-all`}
+            className={` ${styles.bg} p-4 md:w-full w-[80vw] h-[40vh] md:h-[50vh] text-center text-[2.5vw] md:text-[1.5vw] lg:text-[1.5vw] cursor-pointer hover:-translate-y-1.5 hover:relative hover:z-10 transition-all`}
             onClick={() => setShowModal(true)}
           >
-            <p className="font-bold text-base mt-10">Media Partner</p>
-            <div className="w-[30dvw] h-[25dvh] md:w-[15dvw] md:h-[30dvh] relative block mx-auto pt-8 md:pt-12">
+            <p className="font-bold text-base mt-7">Media Partner</p>
+            <div className="w-[34dvw] h-[24dvh] md:w-[20dvw] md:h-[30dvh] relative block mx-auto pt-8 md:pt-12">
               <Image src="/assets/medpar.svg" alt="" fill />
             </div>
           </div>
@@ -66,89 +66,89 @@ export default function ContactUs() {
 
         <ContactModal isVisible={showModal} onClose={() => setShowModal(false)}>
           <div className="flex flex-col gap-10">
-            <p className="text-[3.5vw] font-bold md:text-[1.5vw] lg:text-[1.5vw] text-center pb-4">
+            <p className="text-[5vw] font-bold md:text-[4vw] lg:text-[1.5vw] text-center pb-4">
               Media Partner
             </p>
-            <div className="gap-4 md:gap-10 grid grid-cols-2 md:grid-cols-3">
-              <div className="w-20 h-20 relative mx-auto">
+            <div className="gap-10 md:gap-10 grid grid-cols-2 md:grid-cols-3 mb-20">
+              <div className="w-14 h-14 md:w-20 md:h-20 relative mx-auto">
                 <Image
                   alt=""
                   src="/assets/medpar/bem.png"
                   fill
                   objectFit="cover"
-                  className="absolute overflow-visible"
+                  className="absolute overflow-visible md:scale-90"
                 />
               </div>
-              <div className="w-20 h-20 relative mx-auto ">
+              <div className="w-14 h-14 md:w-20 md:h-20 relative mx-auto">
                 <Image
                   alt=""
                   src="/assets/medpar/umn-tv.jpg"
                   fill
                   objectFit="cover"
-                  className="absolute overflow-visible scale-125"
+                  className="absolute overflow-visible md:scale-100 scale-125"
                 />
               </div>
-              <div className="w-20 h-20 relative mx-auto">
+              <div className="w-14 h-14 md:w-20 md:h-20 relative mx-auto">
                 <Image
                   alt=""
                   src="/assets/medpar/umn-radio.png"
                   fill
                   objectFit="cover"
-                  className="absolute overflow-visible scale-125 bg-white"
+                  className="absolute overflow-visible md:scale-100 scale-125 bg-white"
                 />
               </div>
-              <div className="w-20 h-20 relative mx-auto">
+              <div className="w-14 h-14 md:w-20 md:h-20 relative mx-auto">
                 <Image
                   alt=""
                   src="/assets/medpar/umn-juice.png"
                   fill
                   objectFit="cover"
-                  className="absolute overflow-visible"
+                  className="absolute overflow-visible md:scale-90"
                 />
               </div>
-              <div className="w-20 h-20 relative mx-auto">
+              <div className="w-14 h-14 md:w-20 md:h-20 relative mx-auto">
                 <Image
                   alt=""
                   src="/assets/medpar/ultimage.png"
                   fill
                   objectFit="cover"
-                  className="absolute overflow-visible"
+                  className="absolute overflow-visible scale-75 md:scale-50 lg:scale-100"
                 />
               </div>
-              <div className="w-20 h-20 relative mx-auto">
+              <div className="w-14 h-14 md:w-20 md:h-20 relative mx-auto">
                 <Image
                   alt=""
                   src="/assets/medpar/himars.png"
                   fill
                   objectFit="cover"
-                  className="absolute overflow-visible"
+                  className="absolute overflow-visible scale-75 md:scale-50 lg:scale-100"
                 />
               </div>
-              <div className="w-20 h-20 relative mx-auto">
+              <div className="w-14 h-14 md:w-20 md:h-20 relative mx-auto">
                 <Image
                   alt=""
                   src="/assets/medpar/hmdkv.png"
                   fill
                   objectFit="cover"
-                  className="absolute overflow-visible scale-95"
+                  className="absolute overflow-visible scale-75 md:scale-50 lg:scale-90"
                 />
               </div>
-              <div className="w-20 h-20 relative mx-auto">
+              <div className="w-14 h-14 md:w-20 md:h-20 relative mx-auto">
                 <Image
                   alt=""
                   src="/assets/medpar/hmfilm.png"
                   fill
                   objectFit="cover"
-                  className="absolute overflow-visible scale-125"
+                  className="absolute overflow-visible md:scale-100 scale-125"
                 />
               </div>
-              <div className="w-20 h-20 relative mx-auto">
+              <div className="w-14 h-14 md:w-20 md:h-20 relative mx-auto">
                 <Image
                   alt=""
                   src="/assets/medpar/imkom.png"
                   fill
                   objectFit="cover"
-                  className="absolute overflow-visible scale-125"
+                  className="absolute overflow-visible md:scale-100 scale-125"
                 />
               </div>
             </div>
@@ -160,7 +160,7 @@ export default function ContactUs() {
         >
           <Link
             href={"/"}
-            className="uppercase text-white text-center font-normal text-[2.5vw] md:text-[1.5vw] lg:text-[1.5vw] px-8 py-3"
+            className="uppercase text-white text-center font-bold text-[3vw] md:text-[1.5vw] lg:text-[1.5vw] px-8 py-3"
           >
             Back
           </Link>
