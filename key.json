@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "mentoring-396706",
+  "private_key_id": "f842a02b4d3f7f6a62385296df6d2faa1aa53f7b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDJE4HoIPS++B6b\nMDVyR4TdqbOeNnIqAJEmIDBy7ZGVhOWREyZYVmCtykQlEMJ6gzaDWt/i6qpqb6Ol\nT7bTy5XUSjd2nEponFpTEZUuA+/nOBB+htLzrMtcG0p6QqySLnFRjGRcW3xJoeWz\nr4/q3oX5QcxwMy0b/aEnF4IDmlPySh2ZYE9znCxQE5QTG+XjLwE/dSTlYXJWrm7W\nBx3NLl2UIV5r1N8DRdBVy/PC3Qd0mcwRsPbL5oSDBh+LAdXAwK4N3dUnOR4kvBIX\n2dCaGI3wik1BmcH5+AdI+p8n1aStfCCIE/s3cm1hfKQdRtq1+zRW5JYleqZzRXDK\nX/+JjJRVAgMBAAECggEAB49UMwYKLaPmgq8tUz6dIDhhKHGjmTCsRGKxb6C++IAm\noW2241tcByyzozEeHr0QL6AbCs0H2ziXTn/Qv+XHnFOuAieeJJC8VKM0mKZNPsQ8\n2oT3KXI1syDTjAU1t8lHOWmt3EsUQTB1EmxnXM1A/D4dEZra91Jx3KZlnP0QauuN\nUpgFRR5T5KCaDyNlIsh1BV/4KxhdHJ+JDRzuX2FjKWyA4Urohvx2RFUm2NK1Dk9h\nUlMs5225Jiscc6DZfHnNaLAfqdtGea+nHOxY8Pcad59UvBC3dSfpQ7+5QPUO7Cv3\nxVxRivS1kREZb6Ad1fKsa6VsYpK+L9pHIznNcfSwAQKBgQD2qRVS27mGBGPxrWYV\nIec2nBAlTJFI0S0TRgCXl47aIAgaEO+I5l5wWE90PKuBYwEUHXKD2R01njQDj3ob\n0Eeqvl94RlisG78cZr/9ZznB3lRz0sJM6ndALWsdbERmf2hV5lCS9YoEI4jxfR4P\nbGDjJ5O9Jj7i6rxA67KrxsQmYQKBgQDQsJGmcvCso1KuD4h8/wl5aLG4oRHNkycA\ne3S1I1zBf8UUYFIHyUTAUr3Ug4nZFHXZBg/70hkKVWrFrASzkWC2lZFxc7A0A11K\n06aDr4p+EtrMnNIarycs9g4n5U0ZexNhxD9dhxOT3NgCV6+1DAscKiMhTx3DQ4Am\nJ7jk0y9KdQKBgFqO10pVazad1Ae9zrXBfb7Z6z+WbdybF350+/Cr7wF8Mx1GzHqp\ngVCjy3/0ak8VhybYbNulUYkG7TfFbGJbxIQWYryorxN5GGAYBTLGvDjGJKFlZnqQ\ntnl0c1gZEL/E1Qx8g2aBCUvdtABdHDUzaBrdw+r06K+s2LLJFg7k6czhAoGABERX\n9gtLmHwOaLiwlb2xN+ZIG/pPHuDvXzcm/70lXF98bBo8EySuXzBR6VJ3MxUUA8f3\n87IsCOYONNR7lCBY1eLhAmzXIXkgIzOIqBCiyEkiaCSctyb1qhmt2Gr71JWLo+gb\nU5I7eD5/vCyGzzDb2UuTRE8V0LREnoMZaLRYtzECgYB9RrUdn3hbmBNp589tmZip\nJl9Pr9mo5zXP6JhZ+C/Cef7kQ25nzcmSGG9mwHjaZOH02jMNkajdyBldcfMIBzLS\nojnycLrFOSTbBndjh7baPOM0a3jindxP23BFXX9oYQJxq3AxKHlOgfWcQSYXQltv\ntiA+r7Qorl4P1KH6Pf0q1g==\n-----END PRIVATE KEY-----\n",
+  "client_email": "list-mentoring@mentoring-396706.iam.gserviceaccount.com",
+  "client_id": "102568585094129307894",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/list-mentoring%40mentoring-396706.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
