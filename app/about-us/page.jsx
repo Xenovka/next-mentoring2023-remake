@@ -272,10 +272,10 @@ export default function AboutUs() {
               Minerva
             </h3>
             <Image
-              src="/assets/minerva.svg"
+              src="/assets/minerva.png"
               alt="gambar"
-              width={150}
-              height={150}
+              width={180}
+              height={180}
             />
 
             <p className="text-xs md:text-base">

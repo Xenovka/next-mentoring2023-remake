@@ -11,7 +11,8 @@ export default function Faq() {
   const accordionData = [
     {
       title: "Apa itu Character Building Mentoring UMN?",
-      content: `Character Building Mentoring adalah kegiatan tahunan yang bersifat wajib bagi Mentee (Mahasiswa Baru UMN) dengan tujuan memperkenalkan nilai-nilai 5C UMN secara mendalam.`,
+      content: `Character Building Mentoring adalah kegiatan tahunan yang bersifat wajib bagi Mentee 
+      (Mahasiswa Baru UMN) dengan tujuan memperkenalkan nilai-nilai 5C UMN secara mendalam. `,
     },
     {
       title: "Apakah Character Building Mentoring merupakan kegiatan wajib?",
@@ -22,7 +23,7 @@ export default function Faq() {
       content: `Offline di kampus Universitas Multimedia Nusantara.`,
     },
     {
-      title: "CBM  dilaksanakan pada tanggal berapa?",
+      title: "CBM dilaksanakan pada tanggal berapa?",
       content: `CBM akan dilaksanakan pada 9, 16, 23, 30 September 2023`,
     },
     {
@@ -40,7 +41,7 @@ export default function Faq() {
     },
     {
       title: "Apakah ada dress code untuk Character Building Mentoring? ",
-      content: `Atasan putih polos dengan celana hitam polos.`,
+      content: `Atasan putih polos dengan celana hitam polos sesuai dengan peraturan yang berlaku di kampus.`,
     },
     {
       title: "Apakah ada yang perlu dibawa ke CBM?",
@@ -49,12 +50,21 @@ export default function Faq() {
     {
       title:
         "Character Building Mentoring mulai jam berapa dan selesai jam berapa?",
-      content: `Waktu berlangsungnya CBM dapat dipastikan kepada Mentor masing-masing.
-      `,
+      content: `Waktu berlangsungnya CBM dapat dipastikan kepada Mentor masing-masing.`,
+    },
+    {
+      title:
+        "Character Building Mentoring mulai jam berapa dan selesai jam berapa?",
+      content: `Waktu berlangsungnya CBM dapat dipastikan kepada Mentor masing-masing.`,
     },
     {
       title: "Apakah rambut harus hitam atau boleh berwarna?",
       content: `Rambut dibebaskan sesuai ketentuan kampus.`,
+    },
+    {
+      title: "Bagaimana dengan penggunaan aksesoris?",
+      content: `Perhiasan boleh digunakan oleh mentee, selama tidak berlebihan yang dapat 
+      menimbulkan distraksi pada saat melakukan kegiatan CMB.`,
     },
   ];
 
