@@ -169,14 +169,14 @@ export default function Start() {
                       width={60}
                       height={60}
                     />
-                    <h1 className="text-white absolute bottom-3 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
-                      No information yet
+                    <h1 className="text-white text-base absolute bottom-3 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
+                      Team List
                     </h1>
                   </div>
                 </div>
 
                 <Link
-                  href="/news"
+                  href="/team"
                   className="pt-16 flex w-60 mx-auto hover:translate-y-[-5px] transition-transform duration-300"
                 >
                   <Image
@@ -187,7 +187,7 @@ export default function Start() {
                     height={300}
                   />
                   <h1 className="text-white absolute bottom-1/5 left-1/2 -translate-y-1/2 -translate-x-1/2 text-2xl">
-                    News
+                    Team List
                   </h1>
                 </Link>
               </div>
