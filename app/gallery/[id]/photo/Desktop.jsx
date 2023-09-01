@@ -102,9 +102,11 @@ export default function PhotoDesktop({ gallery }) {
           </div>
         </div>
         <div className="">
-          <button className={`${styles.yellowbtn} flex flex-col justify-end place-self-end float-right mt-3`}>
-            <span className=" text-white text-center text-xl px-24 py-3">Back</span>
-          </button>
+          <Link href={`/gallery`}>
+            <button className={`${styles.yellowbtn} flex flex-col justify-end place-self-end float-right mt-3`}>
+              <span className=" text-white text-center text-xl px-24 py-3">Back</span>
+            </button>
+          </Link>
         </div>
       </div>
       <div>

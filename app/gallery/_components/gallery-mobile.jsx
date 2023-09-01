@@ -22,7 +22,7 @@ export default function Mobile() {
           <Image src="/assets/mentoring-logo.svg" className="mx-auto my-auto" alt="Image" width={70} height={70} />
         </div>
         <div className="my-auto w-28">
-          <Image src="/assets/icon-gear.png" className="mx-auto my-auto" alt="Image" width={45} height={45} />
+          <Image src="/assets/icons/icon-gear.png" className="mx-auto my-auto" alt="Image" width={45} height={45} />
         </div>
       </div>
 

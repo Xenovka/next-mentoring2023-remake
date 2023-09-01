@@ -4,20 +4,18 @@ import DivisionSwiper from "@/app/divisi/_components/division-swiper";
 import DivisionHeader from "@/app/divisi/_components/division-header";
 
 import { DivisionContextProvider } from "@/app/divisi/_context/division-context";
-
-const ENDPOINT = process.env.NEXT_PUBLIC_API_ENDPOINT;
+import divisi from "@/model/divisi.json"
 
 export default async function Divisi() {
-  async function getData() {
-    const response = await fetch(`${ENDPOINT}/api`, {
-      method: "GET"
-    });
+  // async function getData() {
+  //   const response = await fetch(`${ENDPOINT}/api`, {
+  //     method: "GET"
+  //   });
 
-    return await response.json();
-  }
+  //   return await response.json();
+  // }
 
-  // Fetch data from API asycronously
-  const divisionData = await getData();
+  const divisionData = divisi
 
   return (
     <>
