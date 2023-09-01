@@ -43,7 +43,7 @@ export default function StartMobile() {
       </div>
       <div className="flex justify-center mt-20 py-2 mx-auto gap-2">
         <Link
-          href="/team"
+          href="/"
           className="hover:translate-y-[-5px] transition-transform duration-300 min-h-20 min-w-fit mb-[-10vh]"
         >
           <div className="relative w-64">
