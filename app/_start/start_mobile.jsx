@@ -117,7 +117,7 @@ export default function StartMobile() {
           />
         </motion.div>
         <div className="relative mt-8 hover:translate-y-[-5px] transition-transform duration-300">
-          <Tooltip message="Only Available in Desktop">
+          <Link href="/badge">
             <Image
               src="/assets/buttons/btn-comingsoon-mobile.svg"
               className="absolute -z-10 left-1/2 -translate-x-1/2 -translate-y-[44%]"
@@ -128,7 +128,7 @@ export default function StartMobile() {
             <h1 className="text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-2xl font-bold">
               Character Selection
             </h1>
-          </Tooltip>
+          </Link>
         </div>
       </div>
 

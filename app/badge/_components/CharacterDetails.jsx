@@ -22,7 +22,7 @@ export default function CharacterDetails({
   return (
     <>
       <button
-        className={`flex justify-center items-center absolute left-72 top-[90px]`}
+        className={`scale-75 lg:scale-100 flex justify-center items-center absolute left-20 top-10 md:left-32 md:top-[60px] lg:left-72 lg:top-[90px]`}
         onClick={() => {
           setStage(3);
         }}
@@ -30,7 +30,7 @@ export default function CharacterDetails({
         <img src="/assets/back.svg" alt="" />
       </button>
       <button
-        className={`w-10 flex justify-center items-center absolute right-72 top-[90px]`}
+        className={`scale-75 lg:scale-100 w-10 flex justify-center items-center absolute right-20 top-10 md:right-32 md:top-[60px] lg:right-72 lg:top-[90px]`}
         onClick={() => {
           setShowModal(false);
         }}
@@ -38,11 +38,11 @@ export default function CharacterDetails({
         <img src="/assets/close.svg" alt="" />
       </button>
 
-      <div className="flex flex-col gap-20 mx-40 justify-center items-center">
-        <h1 className="text-3xl font-extrabold text-center uppercase">
+      <div className="h-full flex flex-col gap-10 mx-10 lg:mx-40 justify-center items-center relative">
+        <h1 className="text-lg lg:text-3xl font-extrabold text-center uppercase">
           Select your character
         </h1>
-        <div className="flex gap-20 justify-center items-center">
+        <div className="flex flex-col lg:flex-row gap-20 justify-center items-center">
           <div className="h-full flex justify-evenly">
             <div className="w-56 h-80 relative flex justify-between">
               <div className="w-40 h-72 ">
