@@ -45,7 +45,7 @@ export default function CharacterDetails({
         <div className="flex flex-col lg:flex-row gap-20 justify-center items-center">
           <div className="h-full flex justify-evenly">
             <div className="w-56 h-80 relative flex justify-between">
-              <div className="w-40 h-72 ">
+              <div className="w-40 h-40 md:w-40 md:h-72 ">
                 <Image
                   src={image}
                   alt={characters.alt}
