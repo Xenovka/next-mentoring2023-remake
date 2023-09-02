@@ -57,7 +57,7 @@ export default function CharacterSelection({
                   alt={data.alt}
                   fill
                   objectFit="cover"
-                  className="absolute overflow-visible cursor-pointer z-40"
+                  className="absolute overflow-visible cursor-pointer z-40 w-[80%] h-[80%] pt-[5vh]"
                 />
                 <div
                   className="w-full h-full absolute top-[4.5rem] z-50 
