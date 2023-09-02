@@ -95,13 +95,15 @@ export default function Faq() {
             </Link>{" "}
             page.
           </div>
-          <div
-            className={`${styles.gradienbutton} flex flex-col justify-center items-center w-[50vw] md:w-[15vw] mt-[3vh]`}
-          >
-            <span className="uppercase text-white text-center font-normal text-[2.5vw] md:text-[1.5vw] lg:text-[1.5vw] px-8 py-3">
-              Back
-            </span>
-          </div>
+          <Link href="/">
+            <div
+              className={`${styles.gradienbutton} flex flex-col justify-center items-center w-[50vw] md:w-[15vw] mt-[3vh]`}
+            >
+              <span className="uppercase text-white text-center font-normal text-[2.5vw] md:text-[1.5vw] lg:text-[1.5vw] px-8 py-3">
+                Back
+              </span>
+            </div>
+          </Link>
         </div>
       </div>
       <Footer />
