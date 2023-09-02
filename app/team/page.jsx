@@ -12,7 +12,7 @@ async function AllTeam() {
         <button
           className={`${styles.yellowbtn} flex flex-col justify-start place-self-start float-left mt-3 ml-3 hover:translate-y-[-5px] transition-transform duration-300`}
         >
-          <span className=" text-white text-center text-xl px-24 py-3">
+          <span className=" text-white text-center text-xl px-12 py-3">
             Back
           </span>
         </button>
@@ -24,7 +24,7 @@ async function AllTeam() {
               <h1 className="text-3xl my-6 text-center mx-auto">{group[0]}</h1>
               <div className="relative overflow-x-auto shadow-md sm:rounded-lg my-8 mx-6">
                 <table className="mx-auto text-xs sm:text-base w-full">
-                  <thead className="text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                  <thead className=" bg-gray-700 text-gray-400">
                     <tr>
                       {group[1].map((item, index) => {
                         return (
@@ -38,10 +38,7 @@ async function AllTeam() {
                   <tbody>
                     {group.slice(2).map((items, index) => {
                       return (
-                        <tr
-                          className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
-                          key={index}
-                        >
+                        <tr className="bg-gray-900 border-gray-700" key={index}>
                           {items.map((item, i) => {
                             return (
                               <td
