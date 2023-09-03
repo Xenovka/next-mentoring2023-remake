@@ -22,7 +22,7 @@ export default function CharacterDetails({
   return (
     <>
       <button
-        className={`scale-75 lg:scale-100 flex justify-center items-center absolute left-20 top-10 md:left-32 md:top-[60px] lg:left-72 lg:top-[90px]`}
+        className={`scale-75 lg:scale-100 flex justify-center items-center absolute left-20 top-16 md:left-32 md:top-[60px] lg:left-72 lg:top-[90px] z-50`}
         onClick={() => {
           setStage(3);
         }}
@@ -30,7 +30,7 @@ export default function CharacterDetails({
         <img src="/assets/back.svg" alt="" />
       </button>
       <button
-        className={`scale-75 lg:scale-100 w-10 flex justify-center items-center absolute right-20 top-10 md:right-32 md:top-[60px] lg:right-72 lg:top-[90px]`}
+        className={`scale-75 lg:scale-100 w-10 flex justify-center items-center absolute right-20 top-16 md:right-32 md:top-[60px] lg:right-72 lg:top-[90px] z-50`}
         onClick={() => {
           setShowModal(false);
         }}
@@ -38,20 +38,20 @@ export default function CharacterDetails({
         <img src="/assets/close.svg" alt="" />
       </button>
 
-      <div className="h-full flex flex-col gap-10 mx-10 lg:mx-40 justify-center items-center relative">
+      <div className="flex flex-col gap-10 mx-10 lg:mx-40 justify-center items-center relative mt-14">
         <h1 className="text-lg lg:text-3xl font-extrabold text-center uppercase">
           Select your character
         </h1>
         <div className="flex flex-col lg:flex-row gap-20 justify-center items-center">
           <div className="h-full flex justify-evenly">
             <div className="w-56 h-80 relative flex justify-between">
-              <div className="w-40 h-40 md:w-40 md:h-72 ">
+              <div className="w-40 h-72">
                 <Image
                   src={image}
                   alt={characters.alt}
                   fill
                   objectFit="cover"
-                  className="absolute overflow-visible z-10"
+                  className="absolute overflow-visible z-10 scale-[80%] md:scale-100"
                 />
               </div>
               <div className="w-full h-full absolute top-20 z-20">
@@ -74,12 +74,12 @@ export default function CharacterDetails({
             <div className="flex flex-col justify-around">
               <div>
                 <p
-                  className={`${characters.color} text-left uppercase font-bold text-3xl drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]`}
+                  className={`${characters.color} text-left uppercase font-bold text-xl md:text-3xl drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]`}
                 >
                   {characters.title}
                 </p>
                 <p
-                  className={`${characters.color} font-bold italic drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]`}
+                  className={`${characters.color} text-sm md:text-base font-bold italic drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]`}
                 >
                   Character Role
                 </p>
@@ -92,7 +92,7 @@ export default function CharacterDetails({
         </div>
 
         <button
-          className={`${styles.gradienbackmodal} w-60 h-10 text-base font-semibold flex justify-center items-center`}
+          className={`${styles.gradienbackmodal} w-60 h-10 text-base font-semibold flex justify-center items-center mb-10`}
           onClick={() => {
             setStage(9);
             setSelected(characters);
