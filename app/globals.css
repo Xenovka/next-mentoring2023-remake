@@ -40,31 +40,31 @@ nextjs-portal {
 
 .hidescroll::-webkit-scrollbar-track {
   border-radius: 10vh;
-  background: transparent;
+  background: #192745;
 }
 
 .hidescroll::-webkit-scrollbar-track:hover {
   border-radius: 10vh;
-  background: transparent;
+  background: #192745;
 }
 
 .hidescroll::-webkit-scrollbar-track:active {
   border-radius: 10vh;
-  background: transparent;
+  background: #192745;
 }
 
 .hidescroll::-webkit-scrollbar-thumb {
-  background: transparent;
+  background: #192745;
   border-radius: 10vh;
-  border: 1px solid transparent;
+  border: 1px solid #192745;
 }
 
 .hidescroll::-webkit-scrollbar-thumb:hover {
-  background: transparent;
+  background: #192745;
 }
 
 .hidescroll::-webkit-scrollbar-thumb:active {
-  background: transparent;
+  background: #192745;
 }
 
 * {
