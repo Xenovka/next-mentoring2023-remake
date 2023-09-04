@@ -135,7 +135,7 @@ export default function StartMobile() {
       {/* 3 button */}
       <div className="flex justify-center gap-2 mt-36">
         <Link
-          href="/gallery"
+          href="/"
           className="hover:translate-y-[-5px] transition-transform duration-300"
         >
           <div className="relative">
