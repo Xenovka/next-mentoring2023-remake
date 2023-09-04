@@ -97,7 +97,7 @@ async function fetchTeam() {
           i++;
           console.log(i, data["values"][i]);
           if (!data["values"][i + 1]) break;
-        } while (!data["values"][i + 1][0].includes("KELOMPOK"));
+        } while (!data["values"][i][0].includes("KELOMPOK"));
         groups.push(group);
       }
     }
