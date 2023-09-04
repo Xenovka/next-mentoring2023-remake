@@ -3,6 +3,7 @@ const nextConfig = {
   images: {
     domains: ["i.ibb.co"],
   },
+  dev: false,
   webpack: (config, { isServer }) => {
     if (!isServer) {
       // Exclude specific modules from being bundled on the client side
@@ -16,7 +17,10 @@ const nextConfig = {
         }
       );
     }
-    config.externals.push({ sharp: 'commonjs sharp', canvas: 'commonjs canvas', });
+    config.externals.push({
+      sharp: "commonjs sharp",
+      canvas: "commonjs canvas",
+    });
     return config;
   },
 };
