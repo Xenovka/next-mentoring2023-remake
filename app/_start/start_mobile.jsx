@@ -43,7 +43,7 @@ export default function StartMobile() {
       </div>
       <div className="flex justify-center mt-20 py-2 mx-auto gap-2">
         <Link
-          href="/"
+          href="/team"
           className="hover:translate-y-[-5px] transition-transform duration-300 min-h-20 h-24 w-64 min-w-fit -mb-20"
         >
           <div className="relative w-64">
@@ -117,7 +117,7 @@ export default function StartMobile() {
           />
         </motion.div>
         <div className="relative mt-8 hover:translate-y-[-5px] transition-transform duration-300">
-          <Tooltip message="Only Available in Desktop">
+          <Link href="/badge">
             <Image
               src="/assets/buttons/btn-comingsoon-mobile.svg"
               className="absolute -z-10 left-1/2 -translate-x-1/2 -translate-y-[44%]"
@@ -128,7 +128,7 @@ export default function StartMobile() {
             <h1 className="text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-2xl font-bold">
               Character Selection
             </h1>
-          </Tooltip>
+          </Link>
         </div>
       </div>
 

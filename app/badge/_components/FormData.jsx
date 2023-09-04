@@ -40,7 +40,7 @@ export default function FormData({ setStage, stage, setShowModal }) {
   return (
     <>
       <button
-        className={`flex justify-center items-center absolute left-72 top-[90px]`}
+        className={`scale-75 lg:scale-100 flex justify-center items-center absolute left-20 top-16 md:left-32 md:top-[60px] lg:left-72 lg:top-[90px]`}
         onClick={() => {
           setStage(1);
         }}
@@ -48,7 +48,7 @@ export default function FormData({ setStage, stage, setShowModal }) {
         <img src="/assets/back.svg" alt="" />
       </button>
       <button
-        className={`w-10 flex justify-center items-center absolute right-72 top-[90px]`}
+        className={`scale-75 lg:scale-100 w-10 flex justify-center items-center absolute right-20 top-16 md:right-32 md:top-[60px] lg:right-72 lg:top-[90px]`}
         onClick={() => {
           setShowModal(false);
         }}
@@ -56,31 +56,33 @@ export default function FormData({ setStage, stage, setShowModal }) {
         <img src="/assets/close.svg" alt="" />
       </button>
 
-      <div className="flex flex-col gap-16 mx-40 justify-center items-center">
-        <h1 className="text-3xl font-extrabold text-center uppercase">
+      <div className="h-full flex flex-col gap-10 mx-10 lg:mx-40 justify-center items-center relative">
+        <h1 className="text-lg lg:text-3xl font-extrabold text-center uppercase">
           Welcome! Please Insert Your Data!
         </h1>
-        <div className="w-full flex flex-col gap-5">
-          <div className="flex justify-between">
-            <p className="text-lg font-semibold">Nama</p>
-            <div className="flex gap-10">
+        <div className="flex flex-col gap-5">
+          <div className="flex flex-col md:flex-row md:gap-10">
+            <div className="w-40 flex justify-between">
+              <p className="text-sm lg:text-lg font-semibold">Nama</p>
               <p>:</p>
-              <input
-                type="text"
-                placeholder="Alexandria Dinda"
-                className="w-96 px-2 bg-[#0F1633]"
-                value={name}
-                name={"name"}
-                onChange={(e) => setName(e.target.value)}
-                required
-                maxlength="10"
-              />
             </div>
+            <input
+              type="text"
+              placeholder="Alexandria Dinda"
+              className="w-60 lg:w-96 px-2 bg-[#0F1633]"
+              value={name}
+              name={"name"}
+              onChange={(e) => setName(e.target.value)}
+              required
+              maxlength="10"
+            />
           </div>
-          <div className="flex justify-between">
-            <p className="text-lg font-semibold">Jenis Kelamin</p>
-            <div className="flex gap-12 mr-[119px]">
+          <div className="flex flex-col md:flex-row md:gap-10">
+            <div className="w-40 flex justify-between">
+              <p className="text-sm lg:text-lg font-semibold">Jenis Kelamin</p>
               <p>:</p>
+            </div>
+            <div className="flex gap-10">
               <input
                 type="radio"
                 name="gender"
@@ -88,7 +90,7 @@ export default function FormData({ setStage, stage, setShowModal }) {
                 required
                 checked={gender === "male"}
                 onChange={(e) => setGender(e.target.value)}
-              />{" "}
+              />
               Male
               <input
                 type="radio"
@@ -97,80 +99,80 @@ export default function FormData({ setStage, stage, setShowModal }) {
                 required
                 checked={gender === "female"}
                 onChange={(e) => setGender(e.target.value)}
-              />{" "}
+              />
               Female
             </div>
           </div>
-          <div className="flex justify-between">
-            <p className="text-lg font-semibold">NIM</p>
-            <div className="flex gap-10">
+          <div className="flex flex-col md:flex-row md:gap-10">
+            <div className="w-40 flex justify-between">
+              <p className="text-sm lg:text-lg font-semibold">NIM</p>
               <p>:</p>
-              <input
-                type="number"
-                onKeyDown={blockInvalidChar}
-                placeholder="00000072345"
-                className="w-96 px-2 bg-[#0F1633]"
-                onChange={(e) => setNim(e.target.value)}
-                value={nim}
-                name={"nim"}
-                required
-              />
             </div>
+            <input
+              type="number"
+              onKeyDown={blockInvalidChar}
+              placeholder="00000072345"
+              className="w-60 lg:w-96 px-2 bg-[#0F1633]"
+              onChange={(e) => setNim(e.target.value)}
+              value={nim}
+              name={"nim"}
+              required
+            />
           </div>
-          <div className="flex justify-between">
-            <p className="text-lg font-semibold">Jurusan</p>
-            <div className="flex gap-10">
+          <div className="flex flex-col md:flex-row md:gap-10">
+            <div className="w-40 flex justify-between">
+              <p className="text-sm lg:text-lg font-semibold">Jurusan</p>
               <p>:</p>
-              <input
-                type="text"
-                placeholder="Desain Komunikasi Visual"
-                className="w-96 px-2 bg-[#0F1633]"
-                onChange={(e) => setJurusan(e.target.value)}
-                value={jurusan}
-                name={"jurusan"}
-                required
-              />
             </div>
+            <input
+              type="text"
+              placeholder="Desain Komunikasi Visual"
+              className="w-60 lg:w-96 px-2 bg-[#0F1633]"
+              onChange={(e) => setJurusan(e.target.value)}
+              value={jurusan}
+              name={"jurusan"}
+              required
+            />
           </div>
-          <div className="flex justify-between">
-            <p className="text-lg font-semibold">No. Kelompok</p>
-            <div className="flex gap-10">
+          <div className="flex flex-col md:flex-row md:gap-10">
+            <div className="w-40 flex justify-between">
+              <p className="text-sm lg:text-lg font-semibold">No. Kelompok</p>
               <p>:</p>
-              <input
-                type="number"
-                min="1"
-                placeholder="75"
-                className="w-96 px-2 bg-[#0F1633]"
-                onChange={(e) => setGroup(e.target.value)}
-                value={group}
-                name={"group"}
-                onKeyDown={blockInvalidChar}
-                required
-              />
             </div>
+            <input
+              type="number"
+              min="1"
+              placeholder="75"
+              className="w-60 lg:w-96 px-2 bg-[#0F1633]"
+              onChange={(e) => setGroup(e.target.value)}
+              value={group}
+              name={"group"}
+              onKeyDown={blockInvalidChar}
+              required
+            />
           </div>
-          <div className="flex justify-between">
-            <p className="text-lg font-semibold">Nama Mentor</p>
-            <div className="flex gap-10">
+          <div className="flex flex-col md:flex-row md:gap-10">
+            <div className="w-40 flex justify-between">
+              <p className="text-sm lg:text-lg font-semibold">Nama Mentor</p>
               <p>:</p>
-              <input
-                type="text"
-                placeholder="Syaiful Anam"
-                className="w-96 px-2 bg-[#0F1633]"
-                onChange={(e) => setMentor(e.target.value)}
-                value={mentor}
-                name={"mentor"}
-                required
-              />
             </div>
+            <input
+              type="text"
+              placeholder="Syaiful Anam"
+              className="w-60 lg:w-96 px-2 bg-[#0F1633]"
+              onChange={(e) => setMentor(e.target.value)}
+              value={mentor}
+              name={"mentor"}
+              required
+            />
           </div>
         </div>
-        <p className="text-center opacity-50 italic">
+        <p className="text-xs lg:text-base text-center opacity-50 italic">
           Diharapkan kepada mentee untuk mengisi data diri dengan benar!
         </p>
         <div>
           <button
-            className={`${styles.gradienbackmodal} w-60 h-10 text-base font-semibold flex justify-center items-center`}
+            className={`${styles.gradienbackmodal} w-40 md:w-60 h-10 text-base font-semibold flex justify-center items-center`}
             type="submit"
             onClick={handleDataSubmit}
           >

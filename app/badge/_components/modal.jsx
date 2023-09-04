@@ -11,7 +11,7 @@ export default function Modal({ isVisible, children, bg }) {
         <div
           className={`w-full h-full flex flex-col justify-evenly items-center overflow-scroll overflow-x-hidden hidescroll`}
         >
-          <div className="w-full">{children}</div>
+          <div className="w-full h-full">{children}</div>
         </div>
       </div>
     </div>

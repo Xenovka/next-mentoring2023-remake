@@ -176,7 +176,7 @@ export default function Start() {
                 </div>
 
                 <Link
-                  href="/"
+                  href="/team"
                   className="pt-16 flex w-60 mx-auto hover:translate-y-[-5px] transition-transform duration-300"
                 >
                   <Image

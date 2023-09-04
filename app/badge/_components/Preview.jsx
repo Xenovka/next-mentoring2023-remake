@@ -89,19 +89,19 @@ export default function Preview({ setStage, selected, setShowModal }) {
     let nama = createText(300, 20, nameData, 40, karla700);
     badge.add(nama);
 
-    let role = createText(300, 60, selected.title, 22, karla700);
+    let role = createText(300, 70, selected.title, 22, karla700);
     badge.add(role);
 
-    let nim = createText(300, 90, nimData, 16);
+    let nim = createText(300, 105, nimData, 16);
     badge.add(nim);
 
-    let jurusan = createText(300, 110, jurusanData, 16);
+    let jurusan = createText(300, 130, jurusanData, 16);
     badge.add(jurusan);
 
     let desc = selected.description;
     let description = new fabric.Textbox(desc, {
       left: 300,
-      top: 150,
+      top: 160,
       width: 400,
       fontSize: 16,
       fill: "white",
@@ -234,7 +234,7 @@ export default function Preview({ setStage, selected, setShowModal }) {
   return (
     <>
       <button
-        className={`flex justify-center items-center absolute left-72 top-[90px]`}
+        className={`scale-75 lg:scale-100 flex justify-center items-center absolute left-20 top-16 md:left-32 md:top-[60px] lg:left-72 lg:top-[90px] z-50`}
         onClick={() => {
           setStage(3);
         }}
@@ -242,7 +242,7 @@ export default function Preview({ setStage, selected, setShowModal }) {
         <img src="/assets/back.svg" alt="" />
       </button>
       <button
-        className={`w-10 flex justify-center items-center absolute right-72 top-[90px]`}
+        className={`scale-75 lg:scale-100 w-10 flex justify-center items-center absolute right-20 top-16 md:right-32 md:top-[60px] lg:right-72 lg:top-[90px] z-50`}
         onClick={() => {
           setShowModal(false);
         }}
@@ -250,17 +250,17 @@ export default function Preview({ setStage, selected, setShowModal }) {
         <img src="/assets/close.svg" alt="" />
       </button>
 
-      <div className="flex flex-col mx-40 justify-center items-center">
-        <div className="flex flex-col items-center gap-10">
+      <div className="h-full flex flex-col gap-10 mx-10 lg:mx-40 justify-center items-center relative">
+        <div className="flex flex-col items-center lg:gap-10">
           <canvas
             ref={canvasRef}
             id="canvas"
             width="400"
             height="200"
-            className="border-2 border-yellow-200"
+            className="border-2 border-white-200 scale-[30%] md:scale-[60%] lg:scale-100"
           />
 
-          <div className="w-full flex justify-between">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
             <button
               className={`${styles.gradienbackmodal} w-60 h-10 text-base font-semibold flex justify-center items-center`}
               onClick={downloadImage}
