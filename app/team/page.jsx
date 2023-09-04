@@ -88,21 +88,20 @@ async function fetchTeam() {
     let data = sheetData.data;
 
     // kelompokin grup
+
+    let group = [];
     for (let i = 0; i < data["values"].length; i++) {
-      let group = [];
 
       if (data["values"][i][0].includes("KELOMPOK")) {
-        do {
-          group.push(data["values"][i]);
-          i++;
-          console.log(i, data["values"][i]);
-          if (!data["values"][i + 1]) break;
-        } while (!data["values"][i + 1][0].includes("KELOMPOK"));
-        groups.push(group);
+        group = []
+        group.push(data["values"][i]);
+        if (group.length > 0) {
+          groups.push(group);
+        }
+      } else {
+        group.push(data["values"][i]);
       }
     }
-    // console.log("====================================")
-    // console.log(groups)
   } catch (error) {
     console.error("Error fetching data:", error);
     return [];
