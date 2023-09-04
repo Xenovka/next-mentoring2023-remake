@@ -79,7 +79,7 @@ export default function Start() {
               <div className="bg-gradient-to-t to-transparent rounded-lg p-0.5 relative mx-auto w-80">
                 <div className="p-1 bg-gradient-to-t from-yellowOutline to-transparent rounded-lg mb-8 ">
                   <Image
-                    src="/assets/mantap.png"
+                    src="/assets/gallery.png"
                     className="w-full rounded-lg"
                     alt="Image"
                     width={200}
