@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -49,13 +48,12 @@ export default function Home() {
         </div>
       </motion.div>
       <div>
-        <Link
-          href={""}
+        <div
           className="box box-enter py-6 px-10 flex text-center justify-center items-center cursor-pointer hover:-translate-y-2 transition-transform active:translate-y-0 ease-in-out text-xl font-bold"
           onClick={() => setIsEntered(true)}
         >
           BEGIN THE JOURNEY
-        </Link>
+        </div>
       </div>
     </div>
   );
