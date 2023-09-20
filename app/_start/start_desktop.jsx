@@ -87,7 +87,7 @@ export default function Start() {
                   />
                 </div>
                 <Link
-                  href="/"
+                  href="/gallery"
                   className="pt-10 flex w-full mx-auto hover:translate-y-[-5px] transition-transform duration-300"
                 >
                   <Image

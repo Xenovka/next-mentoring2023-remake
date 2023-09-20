@@ -8,16 +8,16 @@ export default function EventList({ isMobile, img, title, id, active, setActive 
     <>
       {isMobile ? (
         <div className="flex bg-[#00072330] ">
-          <Image src={img} className="p-4" alt="Image" width={150} height={150} quality={100} />
+          <Image src={img} className="p-4 object-cover" alt="Image" width={150} height={150} quality={100} />
           <div className=" mr-4 my-4 w-3/5">
             <h2 className="text-2xl">{title}</h2>
             <h2 className="text-md">Mentoring UMN 2023</h2>
             <div className="w-full h-px bg-white"></div>
             <div className="flex justify-around mt-2">
-              <Link href={`/gallery/${id}`}>
+              <Link href={`/gallery/${id}/photo`}>
                 <button className={`${styles.bluebtn} py-3 px-10 align-middle`}>Foto</button>
               </Link>
-              <Link href={`/gallery/${id}`}>
+              <Link href={`/gallery/${id}/video`}>
                 <button className={`${styles.bluebtn} py-3 px-10 align-middle`}>Video</button>
               </Link>
             </div>
@@ -31,7 +31,7 @@ export default function EventList({ isMobile, img, title, id, active, setActive 
             }`}
             onClick={() => setActive(id)}
           >
-            <Image src="/assets/buttons/btn-play.svg" className="" alt={title} quality={100} width={18} height={18} />
+            <Image src="/assets/buttons/btn-play.svg" className="" alt={title} quality={40} width={18} height={18} />
             <h5>{title}</h5>
           </button>
         </li>

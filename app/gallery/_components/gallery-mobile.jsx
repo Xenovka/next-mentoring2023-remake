@@ -1,6 +1,7 @@
 import Image from "next/image";
 import EventList from "./gallery-eventlist";
 import Footer from "@/components/footer";
+import { GALLERY } from "../_data/gallery";
 
 export default function Mobile() {
   return (
@@ -15,7 +16,7 @@ export default function Mobile() {
             height={300}
           />
           <h1 className="text-white whitespace-nowrap absolute left-[45%] -translate-x-1/2 -translate-y-1/2 text-md">
-            Page Title
+            Gallery
           </h1>
         </div>
         <div className="my-auto w-28">
@@ -27,9 +28,18 @@ export default function Mobile() {
       </div>
 
       <div className="flex flex-col justify-center mt-5 text-white max-w-md mx-auto">
+        {GALLERY.map((item, index) => (
+          <EventList
+            isMobile={true}
+            title={item.title}
+            img={item.image}
+            id={item.id}
+            key={index}
+          />
+        ))}
+        {/* <EventList isMobile={true} img="/assets/squareholder.png" title="Pembekalan 1" id="1" key={1} />
         <EventList isMobile={true} img="/assets/squareholder.png" title="Pembekalan 1" id="1" key={1} />
-        <EventList isMobile={true} img="/assets/squareholder.png" title="Pembekalan 1" id="1" key={1} />
-        <EventList isMobile={true} img="/assets/squareholder.png" title="Pembekalan 1" id="1" key={1} />
+        <EventList isMobile={true} img="/assets/squareholder.png" title="Pembekalan 1" id="1" key={1} /> */}
       </div>
 
       <Footer />

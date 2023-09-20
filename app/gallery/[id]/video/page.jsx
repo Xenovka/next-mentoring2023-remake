@@ -5,7 +5,7 @@ import useCheckMobileScreen from "../../_hooks/useCheckMobileScreen";
 
 import Mobile from "./Mobile";
 import Desktop from "./Desktop";
-import { GALLERY } from "../../_data/dummy";
+import { GALLERY } from "../../_data/gallery";
 
 // export const getServerSideProps = async ({ query }) => {
 //   const res = GALLERY.find((v) => v.id === Number(query.id))?.videos;

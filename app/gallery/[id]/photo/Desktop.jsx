@@ -4,22 +4,27 @@ import Image from "next/image";
 import { useState } from "react";
 import styles from "@/public/styles/gallery.module.css";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { notFound, usePathname } from "next/navigation";
 import Footer from "@/components/footer";
 
 export default function PhotoDesktop({ gallery }) {
+  const path = usePathname();
+  const id = path.split("/")[2];
+  
   const imagesPerPage = 15; // Number of images to display per page
   const [currentPage, setCurrentPage] = useState(1);
 
   // Calculate the index range for the images to display on the current page
   const lastIndex = currentPage * imagesPerPage;
   const firstIndex = lastIndex - imagesPerPage;
-  const currentGallery = gallery.slice(firstIndex, lastIndex);
+
+  const selected = gallery.find((v) => v.id === Number(id));
+  if(!selected) notFound()
+  const currentGallery = selected.photos.slice(firstIndex, lastIndex);
 
   // Change the current page
   const handlePageChange = (pageNumber) => setCurrentPage(pageNumber);
-  const path = usePathname();
-  const id = path.split("/")[2];
+  
   return (
     <div className="w-full h-full md:overflow-x-hidden hidescroll ">
       <Image
@@ -54,9 +59,9 @@ export default function PhotoDesktop({ gallery }) {
         {/* blue rectangle */}
         <div className="relative w-[80vw] mx-auto">
           <div className="grid grid-cols-5 gap-6 justify-center my-5">
-            {currentGallery[id].photos.map((image, index) => (
+            {currentGallery.map((image, index) => (
               <div className="w-[15dvw] h-[20dvh] aspect-[4/3] relative" key={index}>
-                <Image src={image} className="mx-auto object-center object-contain" alt="Image" fill quality={100} />
+                <Image src={image} className="mx-auto object-center object-contain" alt="Image" fill quality={50} />
               </div>
             ))}
           </div>
@@ -76,7 +81,7 @@ export default function PhotoDesktop({ gallery }) {
                 </a>
               )}
 
-              {Array.from({ length: Math.ceil(gallery.length / imagesPerPage) }, (_, i) => (
+              {Array.from({ length: Math.ceil(selected.photos.length / imagesPerPage) }, (_, i) => (
                 <a
                   href="#"
                   key={i}
@@ -87,7 +92,7 @@ export default function PhotoDesktop({ gallery }) {
                 </a>
               ))}
 
-              {currentPage < Math.ceil(gallery.length / imagesPerPage) && (
+              {currentPage < Math.ceil(selected.photos.length / imagesPerPage) && (
                 <a
                   href="#"
                   className="pr-3 py-1 rounded-r-md text-white"

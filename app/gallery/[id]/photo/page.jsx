@@ -2,7 +2,7 @@
 
 import Desktop from "./Desktop";
 import Mobile from "./Mobile";
-import { GALLERY } from "../../_data/dummy";
+import { GALLERY } from "../../_data/gallery";
 import useCheckMobileScreen from "../../_hooks/useCheckMobileScreen";
 
 // export const getServerSideProps = async ({ query }) => {

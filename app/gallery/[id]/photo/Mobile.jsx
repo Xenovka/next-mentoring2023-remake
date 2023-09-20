@@ -1,14 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { notFound, usePathname } from "next/navigation";
 import Link from "next/link";
 import Footer from "@/components/footer";
 
 export default function Mobile({ gallery }) {
   const path = usePathname();
   const id = path.split("/")[2];
-
+  const selected = gallery.find((v) => v.id === Number(id));
+  if(!selected) notFound()
   return (
     <div className="sm:px-4 py-8 w-full h-screen">
       <div className="flex justify-center mx-auto gap-8">
@@ -45,10 +46,10 @@ export default function Mobile({ gallery }) {
       </div>
       <div className="flex flex-col justify-center  text-white  mx-auto">
         <div className="flex flex-wrap gap-4 justify-center my-5 flex-grow">
-          {gallery[Number(id)].photos.map((image, index) => (
+          {selected.photos.map((image, index) => (
             // <div className="w-[15dvw]  aspect-[4/3] relative" key={index}>
             <div className="relative md:w-72 md:h-44 w-52 h-36" key={index}>
-              <Image src={image} className="mx-auto object-center object-contain" alt="Image" fill quality={100} />
+              <Image src={image} className="mx-auto object-center object-contain" alt="Image" fill quality={50} />
             </div>
           ))}
         </div>

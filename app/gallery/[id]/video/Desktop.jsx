@@ -10,12 +10,17 @@ import ReactPlayer from "react-player";
 import "swiper/css";
 import "swiper/css/navigation";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { notFound, usePathname } from "next/navigation";
 import Footer from "@/components/footer";
 SwiperCore.use([Navigation]);
 
 export default function Desktop({ gallery }) {
-  const [isPlaying, setIsPlaying] = useState(gallery.map(() => false));
+  const path = usePathname();
+  const id = path.split("/")[2];
+  const selected = gallery.find((v) => v.id === Number(id));
+  if(!selected) notFound()
+
+  const [isPlaying, setIsPlaying] = useState(selected.videos.map(() => false));
 
   const handleSlideChange = () => {
     setIsPlaying(isPlaying.map(() => false));
@@ -24,8 +29,6 @@ export default function Desktop({ gallery }) {
   const handleVideoToggle = (i) => {
     setIsPlaying(isPlaying.map((v, index) => (index === i ? true : false)));
   };
-  const path = usePathname();
-  const id = path.split("/")[2];
 
   return (
     <div className="w-full h-full md:overflow-x-hidden hidescroll ">
@@ -51,24 +54,35 @@ export default function Desktop({ gallery }) {
         </div>
 
         {/* Carousel */}
-        <div className="relative w-[80vw] mx-auto my-16 select-none">
-          <Swiper navigation={true} onSlideChange={handleSlideChange}>
-            {gallery[id].videos.map((url, i) => (
-              <SwiperSlide className="flex justify-center w-full py-4 " key={i}>
-                <div className="text-center h-[680px]">
-                  <ReactPlayer
-                    className="mx-auto"
-                    width={"90%"}
-                    height={"100%"}
-                    url={url}
-                    playing={isPlaying[i]}
-                    onPlay={() => handleVideoToggle(i)}
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+        {
+          selected.videos.length > 0 ? (
+            <div className="relative w-[80vw] mx-auto my-16 select-none">
+              <Swiper navigation={true} onSlideChange={handleSlideChange}>
+                {selected.videos.map((url, i) => (
+                  <SwiperSlide className="flex justify-center w-full py-4 " key={i}>
+                    <div className="text-center h-[680px]">
+                      <ReactPlayer
+                        className="mx-auto"
+                        width={"90%"}
+                        height={"100%"}
+                        url={url}
+                        playing={isPlaying[i]}
+                        onPlay={() => handleVideoToggle(i)}
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          ) : (
+            <div className="relative w-[80vw] mx-auto my-16 select-none flex justify-center">
+              <div className="text-center ">
+                <h1 className="text-white text-4xl font-bold my-32">No Video Available</h1>
+              </div>
+            </div>
+          )
+        }
+
 
         {/* Back Button */}
         <div className="">
