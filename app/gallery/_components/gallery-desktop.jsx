@@ -14,7 +14,7 @@ export default function Desktop() {
   useEffect(() => {
     setGallery(GALLERY.find((v) => v.id === active));
   }, [active]);
-  console.log(gallery.image)
+  console.log(gallery.image);
   return (
     <div className="w-full h-full md:overflow-x-hidden hidescroll ">
       <Image
@@ -36,12 +36,16 @@ export default function Desktop() {
 
         <div className="text-white">
           <div className={` mt-10 py-10 px-14  `}>
-            <h2 className="text-center text-4xl mb-6 font-bold">Select Your Event</h2>
+            <h2 className="text-center text-4xl mb-6 font-bold">
+              Select Your Event
+            </h2>
             <div className={`flex w-full gap-6 max-h-[60vh] min-h-[60vh]`}>
               <div className="basis-1/3">
                 <h2 className="text-center text-4xl italic">Events</h2>
                 <div className="bg-white h-[2px] my-8"></div>
-                <ul className={`list-none overflow-y-auto max-h-[49dvh] ${styles.list} pl-2`}>
+                <ul
+                  className={`list-none font-bold overflow-y-auto max-h-[49dvh] ${styles.list} pl-2`}
+                >
                   {GALLERY.map((item, index) => (
                     <EventList
                       isMobile={false}
@@ -59,19 +63,21 @@ export default function Desktop() {
                 <div className="relative h-full">
                   <Image
                     src={gallery.image}
-                    className="object-cover border-x-[30px] border-y-[30px] border-[#172546]"
+                    className="object-cover"
                     alt="pembekalan1"
                     quality={100}
                     fill="responsive"
                   />
-                  <div className="absolute z-10 2xl:bottom-20 bottom-44 left-16">
+                  <div className="w-full font-bold absolute z-10 2xl:bottom-20 bottom-20 px-16 py-2 bg-[#004BEF]/50">
                     <h2 className="text-5xl ">{gallery.title}</h2>
                     <h3 className="text-2xl ">MENTORING UMN 2023</h3>
                   </div>
-                  <div className="absolute z-10 bottom-20 2xl:right-16 2xl:left-auto left-16">
+                  <div className="absolute z-10 bottom-10 2xl:right-16 2xl:left-auto left-16">
                     <button className={`${styles.whitebtn} flex`}>
                       <Link href={`/gallery/${active}/photo`}>
-                        <span className=" text-white text-center text-xl px-16 py-4">Open Gallery</span>
+                        <span className=" text-white text-center text-xl px-16 py-4">
+                          Open Gallery
+                        </span>
                       </Link>
                     </button>
                   </div>
@@ -82,8 +88,12 @@ export default function Desktop() {
         </div>
         <div className="">
           <Link href={`/`}>
-            <button className={`${styles.yellowbtn} flex flex-col justify-end place-self-end float-right mt-3`}>
-              <span className=" text-white text-center text-xl px-24 py-3">Back</span>
+            <button
+              className={`${styles.yellowbtn} flex flex-col justify-end place-self-end float-right mt-3`}
+            >
+              <span className=" text-white text-center text-xl px-24 py-3">
+                Back
+              </span>
             </button>
           </Link>
         </div>
